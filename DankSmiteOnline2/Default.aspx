@@ -16,12 +16,13 @@
             <ContentTemplate>
                 <legen>Items</legen>
                 <%-- ================================= Items ================================== --%>
-                <div>
+                <div style="position: absolute; left: 300px; top: 400px; height: 250px; width: 600px"
 
                     <asp:Label ID="CurrentItemNameLabel" runat="server" Text="NAME OF ITEM" Font-Size ="40px"></asp:Label>
                     <hr>
 
-                    <div style="position: absolute; left: 0; top:0; ">
+                    <div style="position: absolute; left:232px; top:20px; ">
+                        <asp:Label ID="ItemLabel1" runat="server" Text="Item 1"/>
 
                         <div style="height: 92px; width: 92px;">
                             <div style="position: absolute; left: 0; top:0;">
@@ -31,10 +32,10 @@
                                 <asp:ImageButton ID="ItemFrame1" runat="server" ImageUrl="~/Resources/ItemFrameNeutral.png" OnClick="ItemPicture1_Click"/>
                             </div>
                         </div>
-                        <asp:Label ID="ItemLabel1" runat="server" Text="Item 1"/>
                     </div>
 
-                    <div style="position: absolute; left: 102px; top:0; ">
+                    <div style="position: absolute; left: 339px; top:20px; ">
+                        <asp:Label ID="ItemLabel2" runat="server" Text="Item 2"/>
 
                         <div style="width: 92px; height: 92px;">
                             <div style="position: absolute; left: 0; top:0;">
@@ -44,10 +45,10 @@
                                 <asp:ImageButton ID="ItemFrame2" runat="server" ImageUrl="~/Resources/ItemFrameDamage.png" OnClick="ItemPicture2_Click"/>
                             </div>
                         </div>
-                        <asp:Label ID="ItemLabel2" runat="server" Text="Item 2"/>
                     </div>
 
-                    <div style="position: absolute; left: 204px; top:0;">
+                    <div style="position: absolute; left: 446px; top:20px;">
+                        <asp:Label ID="ItemLabel3" runat="server" Text="Item 3"/>
 
                         <div style="width: 92px; height: 92px;">
                             <div style="position: absolute; left: 0; top:0;">
@@ -57,10 +58,10 @@
                                 <asp:ImageButton ID="ItemFrame3" runat="server" ImageUrl="~/Resources/ItemFrameDamage.png" OnClick="ItemPicture3_Click"/>
                             </div>
                         </div>
-                        <asp:Label ID="ItemLabel3" runat="server" Text="Item 3"/>
                     </div>
 
-                    <div style="position: absolute; left: 0; top:102px;">
+                    <div style="position: absolute; left: 232px; top:132px;">
+                        <asp:Label ID="ItemLabel4" runat="server" Text="Item 4"/>
 
                         <div style="height: 92px; width: 92px;">
                             <div style="position: absolute; left: 0; top:0;">
@@ -70,10 +71,10 @@
                                 <asp:ImageButton ID="ItemFrame4" runat="server" ImageUrl="~/Resources/ItemFrameDamage.png" OnClick="ItemPicture4_Click"/>
                             </div>
                         </div>
-                        <asp:Label ID="ItemLabel4" runat="server" Text="Item 4"/>
                     </div>
 
-                    <div style="position: absolute; left: 102px; top:102px;">
+                    <div style="position: absolute; left: 339px; top:132px;">
+                        <asp:Label ID="ItemLabel5" runat="server" Text="Item 5"/>
 
                         <div style="height: 92px; width: 92px;">
                             <div style="position: absolute; left: 0; top:0;">
@@ -83,10 +84,10 @@
                                 <asp:ImageButton ID="ItemFrame5" runat="server" ImageUrl="~/Resources/ItemFrameDamage.png" OnClick="ItemPicture5_Click"/>
                             </div>
                         </div>
-                        <asp:Label ID="ItemLabel5" runat="server" Text="Item 5"/>
                     </div>
 
-                    <div style="position: absolute; left: 204px; top:102px;">
+                    <div style="position: absolute; left: 446px; top:132px;">
+                        <asp:Label ID="ItemLabel6" runat="server" Text="Item 6"/>
 
                         <div style="height: 92px; width: 92px;">
                             <div style="position: absolute; left: 0; top:0;">
@@ -96,10 +97,10 @@
                                 <asp:ImageButton ID="ItemFrame6" runat="server" ImageUrl="~/Resources/ItemFrameDamage.png" OnClick="ItemPicture6_Click"/>
                             </div>
                         </div>
-                        <asp:Label ID="ItemLabel6" runat="server" Text="Item 6"/>
                     </div>
 
-                    <div style="position: absolute; left: 500px; top:0;">
+                    <div style="position: absolute; left: 0; top:132px;">
+                        <asp:Label ID="RelicaLabel1" runat="server" Text="Relic 1"/>
 
                         <div style="height: 92px; width: 92px;">
                             <div style="position: absolute; left: 0; top: 0;">
@@ -109,10 +110,10 @@
                                 <asp:ImageButton ID="RelicFrame1" runat="server" ImageUrl="~/Resources/ItemFrameDamage.png" OnClick="RelicPicture1_Click"/>
                             </div>
                         </div>
-                        <asp:Label ID="RelicaLabel1" runat="server" Text="Relic 1"/>
                     </div>
 
-                    <div style="position: absolute; left: 530px; top:0;">
+                    <div style="position: absolute; left: 107px; top:132px;">
+                        <asp:Label ID="RelicaLabel2" runat="server" Text="Relic 2"/>
 
                         <div style="height: 92px; width: 92px;">
                             <div style="position: absolute; left: 0; top:0;">
@@ -122,10 +123,10 @@
                                 <asp:ImageButton ID="RelicFrame2" runat="server" ImageUrl="~/Resources/ItemFrameDamage.png" OnClick="RelicPicture2_Click"/>
                             </div>
                         </div>
-                        <asp:Label ID="RelicaLabel2" runat="server" Text="Relic 2"/>
                     </div>
 
-                    <div style="position: absolute; left: 560px; top:0;">
+                    <div style="position: absolute; left: 51px; top:20px;">
+                        <asp:Label ID="StarterItemLabel" runat="server" Text="Starter item"/>
 
                         <div style="height: 92px; width: 92px;">
                             <div style="position: absolute; left: 0; top:0;">
@@ -135,7 +136,6 @@
                                 <asp:ImageButton ID="StarterItemFrame" runat="server" ImageUrl="~/Resources/ItemFrameDamage.png" OnClick="StarterItemPicture_Click"/>
                             </div>
                         </div>
-                        <asp:Label ID="StarterItemLabel" runat="server" Text="Starter item"/>
                     </div>
 
                 </div>

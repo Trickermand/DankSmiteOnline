@@ -49,6 +49,15 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.Label CurrentItemNameLabel;
         
         /// <summary>
+        /// ItemLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ItemLabel1;
+        
+        /// <summary>
         /// ItemPicture1 control.
         /// </summary>
         /// <remarks>
@@ -67,13 +76,13 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton ItemFrame1;
         
         /// <summary>
-        /// ItemLabel1 control.
+        /// ItemLabel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel1;
+        protected global::System.Web.UI.WebControls.Label ItemLabel2;
         
         /// <summary>
         /// ItemPicture2 control.
@@ -94,13 +103,13 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton ItemFrame2;
         
         /// <summary>
-        /// ItemLabel2 control.
+        /// ItemLabel3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel2;
+        protected global::System.Web.UI.WebControls.Label ItemLabel3;
         
         /// <summary>
         /// ItemPicture3 control.
@@ -121,13 +130,13 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton ItemFrame3;
         
         /// <summary>
-        /// ItemLabel3 control.
+        /// ItemLabel4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel3;
+        protected global::System.Web.UI.WebControls.Label ItemLabel4;
         
         /// <summary>
         /// ItemPicture4 control.
@@ -148,13 +157,13 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton ItemFrame4;
         
         /// <summary>
-        /// ItemLabel4 control.
+        /// ItemLabel5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel4;
+        protected global::System.Web.UI.WebControls.Label ItemLabel5;
         
         /// <summary>
         /// ItemPicture5 control.
@@ -175,13 +184,13 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton ItemFrame5;
         
         /// <summary>
-        /// ItemLabel5 control.
+        /// ItemLabel6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel5;
+        protected global::System.Web.UI.WebControls.Label ItemLabel6;
         
         /// <summary>
         /// ItemPicture6 control.
@@ -202,13 +211,13 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton ItemFrame6;
         
         /// <summary>
-        /// ItemLabel6 control.
+        /// RelicaLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel6;
+        protected global::System.Web.UI.WebControls.Label RelicaLabel1;
         
         /// <summary>
         /// RelicPicture1 control.
@@ -229,13 +238,13 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton RelicFrame1;
         
         /// <summary>
-        /// RelicaLabel1 control.
+        /// RelicaLabel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RelicaLabel1;
+        protected global::System.Web.UI.WebControls.Label RelicaLabel2;
         
         /// <summary>
         /// RelicPicture2 control.
@@ -256,13 +265,13 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton RelicFrame2;
         
         /// <summary>
-        /// RelicaLabel2 control.
+        /// StarterItemLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RelicaLabel2;
+        protected global::System.Web.UI.WebControls.Label StarterItemLabel;
         
         /// <summary>
         /// StarterItemPicture control.
@@ -281,15 +290,6 @@ namespace DankSmiteOnline2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton StarterItemFrame;
-        
-        /// <summary>
-        /// StarterItemLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label StarterItemLabel;
         
         /// <summary>
         /// GodUpdatePanel control.
