@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACE97373-B2A8-48DA-BF38-D52710CB5631}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DankSmite</RootNamespace>
+    <AssemblyName>DankSmite</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\DankSmitePublish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon300_5.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>239940C56131170A150D08164000A9F20D9287EA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DankSmite_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DankSmite_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon300_5.ico" />
+    <None Include="Resources\FrameRerollCounter.png" />
+    <None Include="Resources\FrameCurrentItemText.png" />
+    <None Include="Resources\FrameGeneralText.png" />
+    <None Include="Resources\FrameGodName.png" />
+    <None Include="Resources\FrameRerollsUsed.png" />
+    <None Include="Resources\FrameRelic.png" />
+    <None Include="Resources\FrameItem.png" />
+    <None Include="Resources\FrameStarterItem.png" />
+    <None Include="Resources\font-opium.bmp" />
+    <None Include="Resources\OPIUM.TTF" />
+    <None Include="Resources\TestFrameStarter3.png" />
+    <None Include="Resources\TestFrameStarter2.png" />
+    <None Include="Resources\TestFrameStarter.png" />
+    <None Include="Resources\YmirIsTheBest.png" />
+    <None Include="Resources\SplattGreaterThanKlopper.png" />
+    <None Include="Resources\KlopperIsShit.png" />
+    <None Include="Resources\BellonaIsBae.png" />
+    <None Include="Resources\AresSucks.png" />
+    <None Include="Resources\DankFrameRed.png" />
+    <None Include="Resources\DankFrameBlue.png" />
+    <None Include="Resources\heavenly-wings.png" />
+    <None Include="Resources\belt-of-frenzy.png" />
+    <None Include="Resources\NewDankSmiteBrackground.png" />
+    <None Include="Resources\ItemFrameHybrid.png" />
+    <None Include="Resources\ItemFrameDefense.png" />
+    <None Include="Resources\ItemFrameDamage.png" />
+    <None Include="Resources\ItemFrameNeutral.png" />
+    <None Include="Resources\witchblade.png" />
+    <None Include="Resources\winged-blade.png" />
+    <None Include="Resources\wind-demon.png" />
+    <None Include="Resources\watchers-gift.png" />
+    <None Include="Resources\warrior-tabi.png" />
+    <None Include="Resources\warlocks-sash.png" />
+    <None Include="Resources\war-flag.png" />
+    <None Include="Resources\void-stone.png" />
+    <None Include="Resources\void-shield.png" />
+    <None Include="Resources\vampiric-shroud.png" />
+    <None Include="Resources\travelers-shoes.png" />
+    <None Include="Resources\transcendence.png" />
+    <None Include="Resources\toxic-blade.png" />
+    <None Include="Resources\titans-bane.png" />
+    <None Include="Resources\thousand-fold-blade.png" />
+    <None Include="Resources\the-executioner.png" />
+    <None Include="Resources\the-crusher.png" />
+    <None Include="Resources\telkhines-ring.png" />
+    <None Include="Resources\teleport-glyph.png" />
+    <None Include="Resources\talaria-boots.png" />
+    <None Include="Resources\swift-wing.png" />
+    <None Include="Resources\sundering-spear.png" />
+    <None Include="Resources\stone-of-gaia.png" />
+    <None Include="Resources\stone-of-fal.png" />
+    <None Include="Resources\stone-of-binding.png" />
+    <None Include="Resources\stone-cutting-sword.png" />
+    <None Include="Resources\spirit-robe.png" />
+    <None Include="Resources\spectral-armor.png" />
+    <None Include="Resources\spear-of-the-magus.png" />
+    <None Include="Resources\spear-of-desolation.png" />
+    <None Include="Resources\sovereignty.png" />
+    <None Include="Resources\soul-stone.png" />
+    <None Include="Resources\soul-reaver.png" />
+    <None Include="Resources\soul-eater.png" />
+    <None Include="Resources\silverbranch-bow.png" />
+    <None Include="Resources\shoguns-kusari.png" />
+    <None Include="Resources\shoes-of-the-magi.png" />
+    <None Include="Resources\shoes-of-focus.png" />
+    <None Include="Resources\shifters-shield.png" />
+    <None Include="Resources\shield-of-thorns.png" />
+    <None Include="Resources\shield-of-regrowth.png" />
+    <None Include="Resources\shamans-ring.png" />
+    <None Include="Resources\sands-of-time.png" />
+    <None Include="Resources\runic-shield.png" />
+    <None Include="Resources\runeforged-hammer.png" />
+    <None Include="Resources\rod-of-tahuti.png" />
+    <None Include="Resources\rod-of-asclepius.png" />
+    <None Include="Resources\relic-dagger.png" />
+    <None Include="Resources\reinforced-shoes.png" />
+    <None Include="Resources\reinforced-greaves.png" />
+    <None Include="Resources\rangdas-mask.png" />
+    <None Include="Resources\rage.png" />
+    <None Include="Resources\qins-sais.png" />
+    <None Include="Resources\pythagorems-piece.png" />
+    <None Include="Resources\purification-beads.png" />
+    <None Include="Resources\polynomicon.png" />
+    <None Include="Resources\poisoned-star.png" />
+    <None Include="Resources\phantom-veil.png" />
+    <None Include="Resources\pestilence.png" />
+    <None Include="Resources\oni-hunters-garb.png" />
+    <None Include="Resources\odysseus-bow.png" />
+    <None Include="Resources\obsidian-shard.png" />
+    <None Include="Resources\ninja-tabi.png" />
+    <None Include="Resources\mystical-mail.png" />
+    <None Include="Resources\midgardian-mail.png" />
+    <None Include="Resources\meditation-cloak.png" />
+    <None Include="Resources\masamune.png" />
+    <None Include="Resources\mark-of-the-vanguard.png" />
+    <None Include="Resources\mantle-of-discord.png" />
+    <None Include="Resources\malice.png" />
+    <None Include="Resources\mail-of-renewal.png" />
+    <None Include="Resources\magis-blessing.png" />
+    <None Include="Resources\magic-shell.png" />
+    <None Include="Resources\lotus-crown.png" />
+    <None Include="Resources\lonos-mask.png" />
+    <None Include="Resources\jotunns-wrath.png" />
+    <None Include="Resources\jade-emperors-crown.png" />
+    <None Include="Resources\ichaival.png" />
+    <None Include="Resources\hydras-lament.png" />
+    <None Include="Resources\horrific-emblem.png" />
+    <None Include="Resources\hide-of-the-urchin.png" />
+    <None Include="Resources\hide-of-the-nemean-lion.png" />
+    <None Include="Resources\heartward-amulet.png" />
+    <None Include="Resources\heartseeker.png" />
+    <None Include="Resources\hastened-ring.png" />
+    <None Include="Resources\hastened-katana.png" />
+    <None Include="Resources\hand-of-the-gods.png" />
+    <None Include="Resources\gladiators-shield.png" />
+    <None Include="Resources\genjis-guard.png" />
+    <None Include="Resources\gem-of-isolation.png" />
+    <None Include="Resources\gauntlet-of-thebes.png" />
+    <None Include="Resources\frostbound-hammer.png" />
+    <None Include="Resources\ethereal-staff.png" />
+    <None Include="Resources\emperors-armor.png" />
+    <None Include="Resources\dynasty-plate-helm.png" />
+    <None Include="Resources\doom-orb.png" />
+    <None Include="Resources\divine-ruin.png" />
+    <None Include="Resources\devourers-gauntlet.png" />
+    <None Include="Resources\demonic-grip.png" />
+    <None Include="Resources\deaths-toll.png" />
+    <None Include="Resources\deathbringer.png" />
+    <None Include="Resources\cursed-ankh.png" />
+    <None Include="Resources\chronos-pendant.png" />
+    <None Include="Resources\celestial-legion-helm.png" />
+    <None Include="Resources\bumbas-mask.png" />
+    <None Include="Resources\bulwark-of-hope.png" />
+    <None Include="Resources\breastplate-of-valor.png" />
+    <None Include="Resources\brawlers-beat-stick.png" />
+    <None Include="Resources\bracer-of-undoing.png" />
+    <None Include="Resources\book-of-thoth.png" />
+    <None Include="Resources\book-of-the-dead.png" />
+    <None Include="Resources\bluestone-pendant.png" />
+    <None Include="Resources\bloodforge.png" />
+    <None Include="Resources\blink-rune.png" />
+    <None Include="Resources\blackthorn-hammer.png" />
+    <None Include="Resources\bancrofts-talon.png" />
+    <None Include="Resources\atalantas-bow.png" />
+    <None Include="Resources\asi.png" />
+    <None Include="Resources\ancile.png" />
+    <None Include="Resources\aegis-amulet.png" />
+    <None Include="Resources\acorn-of-yggdrasil.png" />
+    <None Include="Resources\zhong-kui.png" />
+    <None Include="Resources\zeus.png" />
+    <None Include="Resources\ymir.png" />
+    <None Include="Resources\xing-tian.png" />
+    <None Include="Resources\xbalanque.png" />
+    <None Include="Resources\vulcan.png" />
+    <None Include="Resources\vamana.png" />
+    <None Include="Resources\ullr.png" />
+    <None Include="Resources\tyr.png" />
+    <None Include="Resources\thoth.png" />
+    <None Include="Resources\thor.png" />
+    <None Include="Resources\the-morrigan.png" />
+    <None Include="Resources\thanatos.png" />
+    <None Include="Resources\terra.png" />
+    <None Include="Resources\sylvanus.png" />
+    <None Include="Resources\susano.png" />
+    <None Include="Resources\sun-wukong.png" />
+    <None Include="Resources\sol.png" />
+    <None Include="Resources\sobek.png" />
+    <None Include="Resources\skadi.png" />
+    <None Include="Resources\serqet.png" />
+    <None Include="Resources\scylla.png" />
+    <None Include="Resources\ravana.png" />
+    <None Include="Resources\ratatoskr.png" />
+    <None Include="Resources\rama.png" />
+    <None Include="Resources\raijin.png" />
+    <None Include="Resources\ra.png" />
+    <None Include="Resources\poseidon.png" />
+    <None Include="Resources\osiris.png" />
+    <None Include="Resources\odin.png" />
+    <None Include="Resources\nu-wa.png" />
+    <None Include="Resources\nox.png" />
+    <None Include="Resources\nike.png" />
+    <None Include="Resources\ne-zha.png" />
+    <None Include="Resources\nemesis.png" />
+    <None Include="Resources\neith.png" />
+    <None Include="Resources\mercury.png" />
+    <None Include="Resources\medusa.png" />
+    <None Include="Resources\loki.png" />
+    <None Include="Resources\kuzenbo.png" />
+    <None Include="Resources\kumbhakarna.png" />
+    <None Include="Resources\kukulkan.png" />
+    <None Include="Resources\khepri.png" />
+    <None Include="Resources\kali.png" />
+    <None Include="Resources\jing-wei.png" />
+    <None Include="Resources\janus.png" />
+    <None Include="Resources\izanami.png" />
+    <None Include="Resources\isis.png" />
+    <None Include="Resources\hun-batz.png" />
+    <None Include="Resources\hou-yi.png" />
+    <None Include="Resources\hercules.png" />
+    <None Include="Resources\hel.png" />
+    <None Include="Resources\he-bo.png" />
+    <None Include="Resources\hades.png" />
+    <None Include="Resources\hachiman.png" />
+    <None Include="Resources\guan-yu.png" />
+    <None Include="Resources\geb.png" />
+    <None Include="Resources\ganesha.png" />
+    <None Include="Resources\freya.png" />
+    <None Include="Resources\fenrir.png" />
+    <None Include="Resources\fafnir.png" />
+    <None Include="Resources\erlang-shen.png" />
+    <None Include="Resources\discordia.png" />
+    <None Include="Resources\da-ji.png" />
+    <None Include="Resources\cupid.png" />
+    <None Include="Resources\cu-chulainn.png" />
+    <None Include="Resources\chronos.png" />
+    <None Include="Resources\chiron.png" />
+    <None Include="Resources\change.png" />
+    <None Include="Resources\chaac.png" />
+    <None Include="Resources\cernunnos.png" />
+    <None Include="Resources\camazotz.png" />
+    <None Include="Resources\cabrakan.png" />
+    <None Include="Resources\bellona.png" />
+    <None Include="Resources\bastet.png" />
+    <None Include="Resources\bakasura.png" />
+    <None Include="Resources\bacchus.png" />
+    <None Include="Resources\awilix.png" />
+    <None Include="Resources\athena.png" />
+    <None Include="Resources\artio.png" />
+    <None Include="Resources\artemis.png" />
+    <None Include="Resources\ares.png" />
+    <None Include="Resources\arachne.png" />
+    <None Include="Resources\apollo.png" />
+    <None Include="Resources\aphrodite.png" />
+    <None Include="Resources\ao-kuang.png" />
+    <None Include="Resources\anubis.png" />
+    <None Include="Resources\anhur.png" />
+    <None Include="Resources\amaterasu.png" />
+    <None Include="Resources\ah-puch.png" />
+    <None Include="Resources\ah-muzen-cab.png" />
+    <None Include="Resources\agni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gaiController\gaiController.csproj">
+      <Project>{4ede9b5e-fb98-462c-8c2c-463de2be6024}</Project>
+      <Name>gaiController</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

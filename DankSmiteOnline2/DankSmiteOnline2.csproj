@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29D2504A-B0FA-43F1-A1C8-AA7217E1EF8E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DankSmiteOnline2</RootNamespace>
+    <AssemblyName>DankSmiteOnline2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\AddPhoneNumber.aspx" />
+    <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\Forgot.aspx" />
+    <Content Include="Account\Lockout.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\ManageLogins.aspx" />
+    <Content Include="Account\ManagePassword.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Account\ResetPassword.aspx" />
+    <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
+    <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\OPIUM.TTF" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Resources\acorn-of-yggdrasil.png" />
+    <Content Include="Resources\aegis-amulet.png" />
+    <Content Include="Resources\agni.png" />
+    <Content Include="Resources\ah-muzen-cab.png" />
+    <Content Include="Resources\ah-puch.png" />
+    <Content Include="Resources\amaterasu.png" />
+    <Content Include="Resources\ancile.png" />
+    <Content Include="Resources\anhur.png" />
+    <Content Include="Resources\anubis.png" />
+    <Content Include="Resources\ao-kuang.png" />
+    <Content Include="Resources\aphrodite.png" />
+    <Content Include="Resources\apollo.png" />
+    <Content Include="Resources\arachne.png" />
+    <Content Include="Resources\ares.png" />
+    <Content Include="Resources\AresSucks.png" />
+    <Content Include="Resources\artemis.png" />
+    <Content Include="Resources\artio.png" />
+    <Content Include="Resources\asi.png" />
+    <Content Include="Resources\atalantas-bow.png" />
+    <Content Include="Resources\athena.png" />
+    <Content Include="Resources\awilix.png" />
+    <Content Include="Resources\bacchus.png" />
+    <Content Include="Resources\bakasura.png" />
+    <Content Include="Resources\bancrofts-talon.png" />
+    <Content Include="Resources\bastet.png" />
+    <Content Include="Resources\bellona.png" />
+    <Content Include="Resources\BellonaIsBae.png" />
+    <Content Include="Resources\belt-of-frenzy.png" />
+    <Content Include="Resources\blackthorn-hammer.png" />
+    <Content Include="Resources\blink-rune.png" />
+    <Content Include="Resources\bloodforge.png" />
+    <Content Include="Resources\bluestone-pendant.png" />
+    <Content Include="Resources\book-of-the-dead.png" />
+    <Content Include="Resources\book-of-thoth.png" />
+    <Content Include="Resources\bracer-of-undoing.png" />
+    <Content Include="Resources\brawlers-beat-stick.png" />
+    <Content Include="Resources\breastplate-of-valor.png" />
+    <Content Include="Resources\bulwark-of-hope.png" />
+    <Content Include="Resources\bumbas-mask.png" />
+    <Content Include="Resources\cabrakan.png" />
+    <Content Include="Resources\camazotz.png" />
+    <Content Include="Resources\celestial-legion-helm.png" />
+    <Content Include="Resources\cernunnos.png" />
+    <Content Include="Resources\chaac.png" />
+    <Content Include="Resources\change.png" />
+    <Content Include="Resources\chiron.png" />
+    <Content Include="Resources\chronos-pendant.png" />
+    <Content Include="Resources\chronos.png" />
+    <Content Include="Resources\cu-chulainn.png" />
+    <Content Include="Resources\cupid.png" />
+    <Content Include="Resources\cursed-ankh.png" />
+    <Content Include="Resources\da-ji.png" />
+    <Content Include="Resources\DankFrameBlue.png" />
+    <Content Include="Resources\DankFrameRed.png" />
+    <Content Include="Resources\deathbringer.png" />
+    <Content Include="Resources\deaths-toll.png" />
+    <Content Include="Resources\demonic-grip.png" />
+    <Content Include="Resources\devourers-gauntlet.png" />
+    <Content Include="Resources\discordia.png" />
+    <Content Include="Resources\divine-ruin.png" />
+    <Content Include="Resources\doom-orb.png" />
+    <Content Include="Resources\dynasty-plate-helm.png" />
+    <Content Include="Resources\emperors-armor.png" />
+    <Content Include="Resources\erlang-shen.png" />
+    <Content Include="Resources\ethereal-staff.png" />
+    <Content Include="Resources\fafnir.png" />
+    <Content Include="Resources\fenrir.png" />
+    <Content Include="Resources\font-opium.bmp" />
+    <Content Include="Resources\FrameCurrentItemText.png" />
+    <Content Include="Resources\FrameGeneralText.png" />
+    <Content Include="Resources\FrameGodName.png" />
+    <Content Include="Resources\FrameItem.png" />
+    <Content Include="Resources\FrameRelic.png" />
+    <Content Include="Resources\FrameRerollCounter.png" />
+    <Content Include="Resources\FrameRerollsUsed.png" />
+    <Content Include="Resources\FrameStarterItem.png" />
+    <Content Include="Resources\freya.png" />
+    <Content Include="Resources\frostbound-hammer.png" />
+    <Content Include="Resources\ganesha.png" />
+    <Content Include="Resources\gauntlet-of-thebes.png" />
+    <Content Include="Resources\geb.png" />
+    <Content Include="Resources\gem-of-isolation.png" />
+    <Content Include="Resources\genjis-guard.png" />
+    <Content Include="Resources\gladiators-shield.png" />
+    <Content Include="Resources\guan-yu.png" />
+    <Content Include="Resources\hachiman.png" />
+    <Content Include="Resources\hades.png" />
+    <Content Include="Resources\hand-of-the-gods.png" />
+    <Content Include="Resources\hastened-katana.png" />
+    <Content Include="Resources\hastened-ring.png" />
+    <Content Include="Resources\he-bo.png" />
+    <Content Include="Resources\heartseeker.png" />
+    <Content Include="Resources\heartward-amulet.png" />
+    <Content Include="Resources\heavenly-wings.png" />
+    <Content Include="Resources\hel.png" />
+    <Content Include="Resources\hercules.png" />
+    <Content Include="Resources\hide-of-the-nemean-lion.png" />
+    <Content Include="Resources\hide-of-the-urchin.png" />
+    <Content Include="Resources\horrific-emblem.png" />
+    <Content Include="Resources\hou-yi.png" />
+    <Content Include="Resources\hun-batz.png" />
+    <Content Include="Resources\hydras-lament.png" />
+    <Content Include="Resources\ichaival.png" />
+    <Content Include="Resources\isis.png" />
+    <Content Include="Resources\ItemFrameDamage.png" />
+    <Content Include="Resources\ItemFrameDefense.png" />
+    <Content Include="Resources\ItemFrameHybrid.png" />
+    <Content Include="Resources\ItemFrameNeutral.png" />
+    <Content Include="Resources\izanami.png" />
+    <Content Include="Resources\jade-emperors-crown.png" />
+    <Content Include="Resources\janus.png" />
+    <Content Include="Resources\jing-wei.png" />
+    <Content Include="Resources\jotunns-wrath.png" />
+    <Content Include="Resources\kali.png" />
+    <Content Include="Resources\khepri.png" />
+    <Content Include="Resources\KlopperIsShit.png" />
+    <Content Include="Resources\kukulkan.png" />
+    <Content Include="Resources\kumbhakarna.png" />
+    <Content Include="Resources\kuzenbo.png" />
+    <Content Include="Resources\loki.png" />
+    <Content Include="Resources\lonos-mask.png" />
+    <Content Include="Resources\lotus-crown.png" />
+    <Content Include="Resources\magic-shell.png" />
+    <Content Include="Resources\magis-blessing.png" />
+    <Content Include="Resources\mail-of-renewal.png" />
+    <Content Include="Resources\malice.png" />
+    <Content Include="Resources\mantle-of-discord.png" />
+    <Content Include="Resources\mark-of-the-vanguard.png" />
+    <Content Include="Resources\masamune.png" />
+    <Content Include="Resources\meditation-cloak.png" />
+    <Content Include="Resources\medusa.png" />
+    <Content Include="Resources\mercury.png" />
+    <Content Include="Resources\midgardian-mail.png" />
+    <Content Include="Resources\mystical-mail.png" />
+    <Content Include="Resources\ne-zha.png" />
+    <Content Include="Resources\neith.png" />
+    <Content Include="Resources\nemesis.png" />
+    <Content Include="Resources\NewDankSmiteBrackground.png" />
+    <Content Include="Resources\nike.png" />
+    <Content Include="Resources\ninja-tabi.png" />
+    <Content Include="Resources\nox.png" />
+    <Content Include="Resources\nu-wa.png" />
+    <Content Include="Resources\obsidian-shard.png" />
+    <Content Include="Resources\odin.png" />
+    <Content Include="Resources\odysseus-bow.png" />
+    <Content Include="Resources\oni-hunters-garb.png" />
+    <Content Include="Resources\osiris.png" />
+    <Content Include="Resources\pestilence.png" />
+    <Content Include="Resources\phantom-veil.png" />
+    <Content Include="Resources\poisoned-star.png" />
+    <Content Include="Resources\polynomicon.png" />
+    <Content Include="Resources\poseidon.png" />
+    <Content Include="Resources\purification-beads.png" />
+    <Content Include="Resources\pythagorems-piece.png" />
+    <Content Include="Resources\qins-sais.png" />
+    <Content Include="Resources\ra.png" />
+    <Content Include="Resources\rage.png" />
+    <Content Include="Resources\raijin.png" />
+    <Content Include="Resources\rama.png" />
+    <Content Include="Resources\rangdas-mask.png" />
+    <Content Include="Resources\ratatoskr.png" />
+    <Content Include="Resources\ravana.png" />
+    <Content Include="Resources\reinforced-greaves.png" />
+    <Content Include="Resources\reinforced-shoes.png" />
+    <Content Include="Resources\relic-dagger.png" />
+    <Content Include="Resources\rod-of-asclepius.png" />
+    <Content Include="Resources\rod-of-tahuti.png" />
+    <Content Include="Resources\runeforged-hammer.png" />
+    <Content Include="Resources\runic-shield.png" />
+    <Content Include="Resources\sands-of-time.png" />
+    <Content Include="Resources\scylla.png" />
+    <Content Include="Resources\serqet.png" />
+    <Content Include="Resources\shamans-ring.png" />
+    <Content Include="Resources\shield-of-regrowth.png" />
+    <Content Include="Resources\shield-of-thorns.png" />
+    <Content Include="Resources\shifters-shield.png" />
+    <Content Include="Resources\shoes-of-focus.png" />
+    <Content Include="Resources\shoes-of-the-magi.png" />
+    <Content Include="Resources\shoguns-kusari.png" />
+    <Content Include="Resources\silverbranch-bow.png" />
+    <Content Include="Resources\skadi.png" />
+    <Content Include="Resources\sobek.png" />
+    <Content Include="Resources\sol.png" />
+    <Content Include="Resources\soul-eater.png" />
+    <Content Include="Resources\soul-reaver.png" />
+    <Content Include="Resources\soul-stone.png" />
+    <Content Include="Resources\sovereignty.png" />
+    <Content Include="Resources\spear-of-desolation.png" />
+    <Content Include="Resources\spear-of-the-magus.png" />
+    <Content Include="Resources\spectral-armor.png" />
+    <Content Include="Resources\spirit-robe.png" />
+    <Content Include="Resources\SplattGreaterThanKlopper.png" />
+    <Content Include="Resources\stone-cutting-sword.png" />
+    <Content Include="Resources\stone-of-binding.png" />
+    <Content Include="Resources\stone-of-fal.png" />
+    <Content Include="Resources\stone-of-gaia.png" />
+    <Content Include="Resources\sun-wukong.png" />
+    <Content Include="Resources\sundering-spear.png" />
+    <Content Include="Resources\susano.png" />
+    <Content Include="Resources\swift-wing.png" />
+    <Content Include="Resources\sylvanus.png" />
+    <Content Include="Resources\talaria-boots.png" />
+    <Content Include="Resources\teleport-glyph.png" />
+    <Content Include="Resources\telkhines-ring.png" />
+    <Content Include="Resources\terra.png" />
+    <Content Include="Resources\TestFrameStarter.png" />
+    <Content Include="Resources\TestFrameStarter2.png" />
+    <Content Include="Resources\TestFrameStarter3.png" />
+    <Content Include="Resources\thanatos.png" />
+    <Content Include="Resources\the-crusher.png" />
+    <Content Include="Resources\the-executioner.png" />
+    <Content Include="Resources\the-morrigan.png" />
+    <Content Include="Resources\thor.png" />
+    <Content Include="Resources\thoth.png" />
+    <Content Include="Resources\thousand-fold-blade.png" />
+    <Content Include="Resources\titans-bane.png" />
+    <Content Include="Resources\toxic-blade.png" />
+    <Content Include="Resources\transcendence.png" />
+    <Content Include="Resources\travelers-shoes.png" />
+    <Content Include="Resources\tyr.png" />
+    <Content Include="Resources\ullr.png" />
+    <Content Include="Resources\vamana.png" />
+    <Content Include="Resources\vampiric-shroud.png" />
+    <Content Include="Resources\void-shield.png" />
+    <Content Include="Resources\void-stone.png" />
+    <Content Include="Resources\vulcan.png" />
+    <Content Include="Resources\war-flag.png" />
+    <Content Include="Resources\warlocks-sash.png" />
+    <Content Include="Resources\warrior-tabi.png" />
+    <Content Include="Resources\watchers-gift.png" />
+    <Content Include="Resources\wind-demon.png" />
+    <Content Include="Resources\winged-blade.png" />
+    <Content Include="Resources\witchblade.png" />
+    <Content Include="Resources\xbalanque.png" />
+    <Content Include="Resources\xing-tian.png" />
+    <Content Include="Resources\ymir.png" />
+    <Content Include="Resources\YmirIsTheBest.png" />
+    <Content Include="Resources\zeus.png" />
+    <Content Include="Resources\zhong-kui.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="Styling.css" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\AddPhoneNumber.aspx.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\AddPhoneNumber.aspx.designer.cs">
+      <DependentUpon>AddPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Lockout.aspx.designer.cs">
+      <DependentUpon>Lockout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManageLogins.aspx.designer.cs">
+      <DependentUpon>ManageLogins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ManagePassword.aspx.designer.cs">
+      <DependentUpon>ManagePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
+      <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\TwoFactorAuthenticationSignIn.aspx.designer.cs">
+      <DependentUpon>TwoFactorAuthenticationSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
+      <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DankSmite\DankSmite.csproj">
+      <Project>{ace97373-b2a8-48da-bf38-d52710cb5631}</Project>
+      <Name>DankSmite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gaiController\gaiController.csproj">
+      <Project>{4ede9b5e-fb98-462c-8c2c-463de2be6024}</Project>
+      <Name>gaiController</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3503</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3503/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
