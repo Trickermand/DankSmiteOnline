@@ -26,7 +26,7 @@ namespace DankSmiteOnline2
 
         ////}
 
-        //string SmiteVersion = "4.23";
+        string SmiteVersion = "5.5";
 
         public bool CredsFlag = false;
         public bool WelcomeFlag = false;
@@ -87,6 +87,7 @@ namespace DankSmiteOnline2
             //legalStarters = itemCol.retrieveLegalStarters(true, true, true, "m");
 
 
+            
         }
 
         #region God Input
@@ -225,6 +226,11 @@ namespace DankSmiteOnline2
         public void BuildButton_Click(object sender, EventArgs e)
         {
             //Setup for next roll
+
+
+            GeneralTextBox.Text = "Welcome to DankSmite!\nClick the Build button to get a god and a build! C" +
+                                "lick the pictures to reroll them, should you want to do so!\n\n\nWorks for smite ve" +
+                                "rsion: " + SmiteVersion + "\nDanksmite version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
 
             //this.GeneralTextBox.Visible = false;
             this.CurrentItemNameLabel.Text = "";
@@ -410,27 +416,27 @@ namespace DankSmiteOnline2
         //}
 
 
-        //private void WelcomeButton_Click(object sender, EventArgs e)
-        //{
-        //    if (WelcomeFlag == false)
-        //    {
-        //        GeneralTextBox.Text = "\n\n\n\n\nHappy birthday Klopper";
-        //        //GeneralTextBox.Text = "Welcome to DankSmite!\nClick the Build button to get a god and a build! C" +
-        //        //                    "lick the pictures to reroll them, should you want to do so!\n\n\nWorks for smite ve" +
-        //        //                    "rsion: " + SmiteVersion + "\nDanksmite version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
-        //        CredsFlag = false;
-        //        WelcomeFlag = true;
-        //        DetailsFlag = false;
-        //        this.GeneralTextBox.Visible = true;
-        //    }
-        //    else
-        //    {
-        //        CredsFlag = false;
-        //        WelcomeFlag = false;
-        //        DetailsFlag = false;
-        //        this.GeneralTextBox.Visible = false;
-        //    }
-        //}
+        private void WelcomeButton_Click(object sender, EventArgs e)
+        {
+            if (WelcomeFlag == false)
+            {
+                //GeneralTextBox.Text = "\n\n\n\n\nHappy birthday Klopper";
+                GeneralTextBox.Text = "Welcome to DankSmite!\nClick the Build button to get a god and a build! C" +
+                                    "lick the pictures to reroll them, should you want to do so!\n\n\nWorks for smite ve" +
+                                    "rsion: " + SmiteVersion + "\nDanksmite version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
+                CredsFlag = false;
+                WelcomeFlag = true;
+                DetailsFlag = false;
+                this.GeneralTextBox.Visible = true;
+            }
+            else
+            {
+                CredsFlag = false;
+                WelcomeFlag = false;
+                DetailsFlag = false;
+                this.GeneralTextBox.Visible = false;
+            }
+        }
 
         //private void DetailsButton_Click(object sender, EventArgs e)
         //{
