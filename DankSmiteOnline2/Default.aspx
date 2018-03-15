@@ -2,42 +2,74 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="TestUpdatePanel">
-        <asp:UpdatePanel ID="TestPanel" runat="server">
+    <div class="ItemUpdatePanel" style="position:relative; left: 595px; top: 50px;">        
+        <asp:UpdatePanel ID="UpdatePanel2" runat="server">
             <ContentTemplate>
-                <legend>Tests</legend>
-                <asp:Label ID="TestLabel" runat="server" Text="Test"/>
+                <asp:Button ID="BuildButton" runat="server" Text="Build!" style="background-color: coral; color:blueviolet;height: 70px; width: 200px; font-size: 35px;" onclick="BuildButton_Click"></asp:Button>
+                <div style="position:relative;">
+                    <asp:TextBox ID="InputField" runat="server" ></asp:TextBox>
+                </div>
+                <%--<input type="text" id="InputField" style="position:relative; left:30px; bottom: 25px;"/>--%>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+
+    <div class="ItemUpdatePanel" style="position:relative; left: 595px; top: 120px;">        
+        <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+            <ContentTemplate>
+                <div style="position:absolute; left: 50px;">
+                    <label>Magical</label>
+                    <label style="position:absolute; top:20px; left:15px;"> <asp:CheckBox ID="GuardianCheckbox" runat="server" Checked="true" style="position:absolute; left: -15px;"/>Guardian</label>
+                    <label style="position:absolute; top:40px; left:15px;"><asp:CheckBox ID="MageCheckbox" runat="server" Checked="true" style="position:absolute; left: -15px;"/>Mage</label>
+                </div>
+
+                <div style="position:absolute; left: 200px;">
+                    <label>Physical</label>
+                    <label style="position:absolute; top:20px; left:15px;"><asp:CheckBox ID="HunterCheckbox" runat="server" Checked="true" style="position:absolute; left: -15px;"/>Hunter</label>
+                    <label style="position:absolute; top:40px; left:15px;"><asp:CheckBox ID="AssassinCheckbox" runat="server" Checked="true" style="position:absolute; left: -15px;"/>Assassin</label>
+                    <label style="position:absolute; top:60px; left:15px;"><asp:CheckBox ID="WarriorCheckbox" runat="server" Checked="true" style="position:absolute; left: -15px;"/>Warrior</label>
+                </div>
+
+                <div style="position:absolute; left: 350px;">
+                    <label>Item Type</label>
+                    <label style="position:absolute; top:20px; left:15px;"><asp:CheckBox ID="DamageCheckbox" runat="server" Checked="true" style="position:absolute; left: -15px;"/>Damage</label>
+                    <label style="position:absolute; top:40px; left:15px;"><asp:CheckBox ID="HybridCheckbox" runat="server" Checked="true" style="position:absolute; left: -15px;"/>Hybrid</label>
+                    <label style="position:absolute; top:60px; left:15px;"><asp:CheckBox ID="DefenseCheckbox" runat="server" Checked="true" style="position:absolute; left: -15px;"/>Defense</label>
+                </div>
+
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
     
-    <div class="ItemUpdatePanel" style="position:relative; height: 500px; left: 100px; top: 150px;">        
+
+    
+    <div class="ItemUpdatePanel" style="position:relative; height: 600px; left: 595px; top: 310px;">        
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
-                <legen>Items</legen>
                 <%-- ================================= Items ================================== --%>
-                <div style="position: absolute; left: 300px; top: 400px; height: 250px; width: 600px"
+                <div style="position: absolute; left: 0px; top: 0px; height: 250px; width: 600px">
 
-                    <asp:Label ID="CurrentItemNameLabel" runat="server" Text="NAME OF ITEM" Font-Size ="40px"></asp:Label>
-                    <hr>
+                    <div style="position: absolute; left:150px; top:0px; ">
+                        <asp:Label ID="CurrentItemNameLabel" runat="server" Text="Spear of Desolation" Font-Size ="34px"></asp:Label>
+                    </div>
 
-                    <div style="position: absolute; left:232px; top:20px; ">
+                    <div style="position: absolute; left:232px; top:70px; ">
                         <asp:Label ID="ItemLabel1" runat="server" Text="Item 1"/>
 
-                        <div style="height: 92px; width: 92px;">
+                        <div style="position:absolute; height: 92px; width: 92px; top:30px">
                             <div style="position: absolute; left: 0; top:0;">
-                                <asp:Image ID="ItemPicture1" runat="server" ImageUrl="~/Resources/ichaival.png" />
+                                <asp:Image ID="ItemPicture1" runat="server" ImageUrl="~/Resources/ichaival.png"/>
                             </div>
-                            <div  style="position: absolute; left: 0; top:0;">
+                            <div  style="position: absolute; left: 0; top:0;" onmouseover="pictureBox1_Hover()">
                                 <asp:ImageButton ID="ItemFrame1" runat="server" ImageUrl="~/Resources/ItemFrameNeutral.png" OnClick="ItemPicture1_Click"/>
                             </div>
                         </div>
                     </div>
 
-                    <div style="position: absolute; left: 339px; top:20px; ">
+                    <div style="position: absolute; left: 339px; top:70px; ">
                         <asp:Label ID="ItemLabel2" runat="server" Text="Item 2"/>
 
-                        <div style="width: 92px; height: 92px;">
+                        <div style="position:absolute; height: 92px; width: 92px; top:30px">
                             <div style="position: absolute; left: 0; top:0;">
                                 <asp:Image ID="ItemPicture2" runat="server" ImageUrl="~/Resources/ichaival.png" />
                             </div>
@@ -47,10 +79,10 @@
                         </div>
                     </div>
 
-                    <div style="position: absolute; left: 446px; top:20px;">
+                    <div style="position: absolute; left: 446px; top:70px;">
                         <asp:Label ID="ItemLabel3" runat="server" Text="Item 3"/>
 
-                        <div style="width: 92px; height: 92px;">
+                        <div style="position:absolute; height: 92px; width: 92px; top:30px">
                             <div style="position: absolute; left: 0; top:0;">
                                 <asp:Image ID="ItemPicture3" runat="server" ImageUrl="~/Resources/ichaival.png" />
                             </div>
@@ -60,10 +92,10 @@
                         </div>
                     </div>
 
-                    <div style="position: absolute; left: 232px; top:132px;">
+                    <div style="position: absolute; left: 232px; top:202px;">
                         <asp:Label ID="ItemLabel4" runat="server" Text="Item 4"/>
 
-                        <div style="height: 92px; width: 92px;">
+                        <div style="position:absolute; height: 92px; width: 92px; top:30px">
                             <div style="position: absolute; left: 0; top:0;">
                                 <asp:Image ID="ItemPicture4" runat="server" ImageUrl="~/Resources/ichaival.png" />
                             </div>
@@ -73,10 +105,10 @@
                         </div>
                     </div>
 
-                    <div style="position: absolute; left: 339px; top:132px;">
+                    <div style="position: absolute; left: 339px; top:202px;">
                         <asp:Label ID="ItemLabel5" runat="server" Text="Item 5"/>
 
-                        <div style="height: 92px; width: 92px;">
+                        <div style="position:absolute; height: 92px; width: 92px; top:30px">
                             <div style="position: absolute; left: 0; top:0;">
                                 <asp:Image ID="ItemPicture5" runat="server" ImageUrl="~/Resources/ichaival.png" />
                             </div>
@@ -86,12 +118,12 @@
                         </div>
                     </div>
 
-                    <div style="position: absolute; left: 446px; top:132px;">
+                    <div style="position: absolute; left: 446px; top:202px;">
                         <asp:Label ID="ItemLabel6" runat="server" Text="Item 6"/>
 
-                        <div style="height: 92px; width: 92px;">
+                        <div style="position:absolute; height: 92px; width: 92px; top:30px">
                             <div style="position: absolute; left: 0; top:0;">
-                                <asp:Image ID="ItemPicture6" runat="server" ImageUrl="~/Resources/ichaival.png" />
+                                <asp:Image ID="ItemPicture6" runat="server" ImageUrl="~/Resources/ichaival.png"/>
                             </div>
                             <div  style="position: absolute; left: 0; top:0;">
                                 <asp:ImageButton ID="ItemFrame6" runat="server" ImageUrl="~/Resources/ItemFrameDamage.png" OnClick="ItemPicture6_Click"/>
@@ -99,10 +131,10 @@
                         </div>
                     </div>
 
-                    <div style="position: absolute; left: 0; top:132px;">
-                        <asp:Label ID="RelicaLabel1" runat="server" Text="Relic 1"/>
+                    <div style="position: absolute; left: 0; top:202px;">
+                        <asp:Label ID="RelicLabel1" runat="server" Text="Relic 1"/>
 
-                        <div style="height: 92px; width: 92px;">
+                        <div style="position:absolute; height: 92px; width: 92px; top:30px">
                             <div style="position: absolute; left: 0; top: 0;">
                                 <asp:Image ID="RelicPicture1" runat="server" ImageUrl="~/Resources/ichaival.png" />
                             </div>
@@ -112,10 +144,10 @@
                         </div>
                     </div>
 
-                    <div style="position: absolute; left: 107px; top:132px;">
-                        <asp:Label ID="RelicaLabel2" runat="server" Text="Relic 2"/>
+                    <div style="position: absolute; left: 107px; top:202px;">
+                        <asp:Label ID="RelicLabel2" runat="server" Text="Relic 2"/>
 
-                        <div style="height: 92px; width: 92px;">
+                        <div style="position:absolute; height: 92px; width: 92px; top:30px">
                             <div style="position: absolute; left: 0; top:0;">
                                 <asp:Image ID="RelicPicture2" runat="server" ImageUrl="~/Resources/ichaival.png" />
                             </div>
@@ -125,10 +157,10 @@
                         </div>
                     </div>
 
-                    <div style="position: absolute; left: 51px; top:20px;">
+                    <div style="position: absolute; left: 51px; top:70px;">
                         <asp:Label ID="StarterItemLabel" runat="server" Text="Starter item"/>
 
-                        <div style="height: 92px; width: 92px;">
+                        <div style="position:absolute; height: 92px; width: 92px; top:30px">
                             <div style="position: absolute; left: 0; top:0;">
                                 <asp:Image ID="StarterItemPicture" runat="server" ImageUrl="~/Resources/ichaival.png" />
                             </div>
@@ -140,23 +172,29 @@
 
                 </div>
 
-
-
                 <%-- ========================================================================== --%>
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
     
-    <div class="GodUpdatePanel">        
+    <div class="GodUpdatePanel" style="position:absolute; left:420px; top:150px;">        
         <asp:UpdatePanel ID="GodUpdatePanel" runat="server">
             <ContentTemplate>
-                <legend>God</legend>
                 <%-- ================================= God ==================================== --%>
-               
-<%--                <asp:Label ID="GodLabel" runat="server" Text="God"/>
-                <asp:ImageButton ID="GodPicture" runat="server" AlternateText="GodPicture" ImageUrl="~/Resources/agni.png" OnClick="GodPicture_Click" />--%>
+                <div style="position:relative; left:150px; top:70px;">
+                    <asp:Label ID="GodLabel" runat="server" Text="Agni" Font-Size ="34px" ></asp:Label>
+                </div>
+                <div style="position: absolute; left:0; top:0;">
 
-
+                        <div style="position:absolute; height: 92px; width: 92px; top:30px">
+                            <div style="position: absolute; left: 0; top:0;">
+                                <asp:Image ID="GodPicture" runat="server" ImageUrl="~/Resources/agni.png" />
+                            </div>
+                            <div  style="position: absolute; left: 0; top:0;">
+                                <asp:ImageButton ID="GodFrame" runat="server" ImageUrl="~/Resources/DankFrameBlue.png" OnClick="GodPicture_Click"/>
+                            </div>
+                        </div>
+                    </div>
                 <%-- ========================================================================== --%>
             </ContentTemplate>
         </asp:UpdatePanel>
@@ -166,7 +204,6 @@
     <div class="RerollUpdatePanel">        
         <asp:UpdatePanel ID="RerollUpdatePanel" runat="server">
             <ContentTemplate>
-                <legend>Rerolls</legend>
                 <%-- ================================= Items and God ================================== --%>
                 
                 <asp:Label ID="RerollLabel" runat="server" Text="Rerolls" Font-Size="10px" ForeColor="Red" Font-Bold="true"/>
@@ -176,38 +213,6 @@
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="Template">        
-        <asp:UpdatePanel ID="Template" runat="server">
-            <ContentTemplate>
-                <legend>Template</legend>
-                <%-- ================================= Items and God ================================== --%>
-               
-
-                <%-- ========================================================================== --%>
-            </ContentTemplate>
-        </asp:UpdatePanel>
-    </div>
-
-
-
-
-
-
 
 
 

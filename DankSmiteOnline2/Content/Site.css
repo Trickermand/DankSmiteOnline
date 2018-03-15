@@ -2,13 +2,9 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url(../Resources/NewDankSmiteBrackground.png);
+    background-image: url(../Resources/SmiteBackground2.png);
     background-repeat: no-repeat;
     background-position: center;
-}
-
-Testing{
-    font-size: 50px;
 }
 
 
@@ -17,6 +13,7 @@ Testing{
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    background-color: forestgreen;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

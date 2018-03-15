@@ -393,6 +393,8 @@
     <Content Include="Resources\shoguns-kusari.png" />
     <Content Include="Resources\silverbranch-bow.png" />
     <Content Include="Resources\skadi.png" />
+    <Content Include="Resources\SmiteBackground1.png" />
+    <Content Include="Resources\SmiteBackground2.png" />
     <Content Include="Resources\sobek.png" />
     <Content Include="Resources\sol.png" />
     <Content Include="Resources\soul-eater.png" />

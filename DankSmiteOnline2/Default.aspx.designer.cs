@@ -13,22 +13,112 @@ namespace DankSmiteOnline2 {
     public partial class _Default {
         
         /// <summary>
-        /// TestPanel control.
+        /// UpdatePanel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel TestPanel;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
         
         /// <summary>
-        /// TestLabel control.
+        /// BuildButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TestLabel;
+        protected global::System.Web.UI.WebControls.Button BuildButton;
+        
+        /// <summary>
+        /// InputField control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox InputField;
+        
+        /// <summary>
+        /// UpdatePanel3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel3;
+        
+        /// <summary>
+        /// GuardianCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox GuardianCheckbox;
+        
+        /// <summary>
+        /// MageCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox MageCheckbox;
+        
+        /// <summary>
+        /// HunterCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox HunterCheckbox;
+        
+        /// <summary>
+        /// AssassinCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox AssassinCheckbox;
+        
+        /// <summary>
+        /// WarriorCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox WarriorCheckbox;
+        
+        /// <summary>
+        /// DamageCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox DamageCheckbox;
+        
+        /// <summary>
+        /// HybridCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox HybridCheckbox;
+        
+        /// <summary>
+        /// DefenseCheckbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox DefenseCheckbox;
         
         /// <summary>
         /// UpdatePanel1 control.
@@ -211,13 +301,13 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton ItemFrame6;
         
         /// <summary>
-        /// RelicaLabel1 control.
+        /// RelicLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RelicaLabel1;
+        protected global::System.Web.UI.WebControls.Label RelicLabel1;
         
         /// <summary>
         /// RelicPicture1 control.
@@ -238,13 +328,13 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton RelicFrame1;
         
         /// <summary>
-        /// RelicaLabel2 control.
+        /// RelicLabel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RelicaLabel2;
+        protected global::System.Web.UI.WebControls.Label RelicLabel2;
         
         /// <summary>
         /// RelicPicture2 control.
@@ -301,6 +391,33 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.UpdatePanel GodUpdatePanel;
         
         /// <summary>
+        /// GodLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GodLabel;
+        
+        /// <summary>
+        /// GodPicture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image GodPicture;
+        
+        /// <summary>
+        /// GodFrame control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton GodFrame;
+        
+        /// <summary>
         /// RerollUpdatePanel control.
         /// </summary>
         /// <remarks>
@@ -326,14 +443,5 @@ namespace DankSmiteOnline2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label RerollNumber;
-        
-        /// <summary>
-        /// Template control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel Template;
     }
 }
