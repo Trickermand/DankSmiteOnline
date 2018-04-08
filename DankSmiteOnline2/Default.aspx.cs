@@ -26,14 +26,16 @@ namespace DankSmiteOnline2
 
         ////}
 
-        //string SmiteVersion = "4.23";
+        string SmiteVersion = "5.5";
 
-        public bool CredsFlag = false;
-        public bool WelcomeFlag = false;
-        public bool DetailsFlag = false;
-        public bool FirstDropDown = true;
-        public bool first = true;
-        public bool clickedRebuild = true;
+        public static bool CredsFlag = false;
+        public static bool WelcomeFlag = false;
+        public static bool DetailsFlag = false;
+        public static bool FirstDropDown = true;
+        public static bool first = true;
+        //public static bool clickedRebuild = true;
+
+        public static bool firstLoad = true;
 
 
         static Item[] _build = new Item[9] {
@@ -70,24 +72,58 @@ namespace DankSmiteOnline2
         }
         
 
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            //InitializeComponent();
-            //WelcomeButton_Click(null, null);
-            Page.Title = "DankSmite " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
-            //foreach (string GodName in AllActualGods)
-            //{
-            //    this.DropDownMenu.Items.Add(GodName);
-            //}
-            //this.DropDownMenu.SelectedIndex = 0;
-            //legalBoots = itemCol.retrieveLegalBoots(true, true, true, "m");
-            //legalItems = itemCol.retrieveLegalItems(true, true, true, "m");
-            //legalRelics = itemCol.retrieveLegalRelics(true, true, true, "m");
-            //legalStarters = itemCol.retrieveLegalStarters(true, true, true, "m");
+            if (firstLoad)
+            {
+                //InitializeComponent();
+                WelcomeButton_Click(null, null);
+                Page.Title = "DankSmite " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
 
+                #region Dropdown
+                //foreach (string GodName in AllActualGods)
+                //{
+                //    this.DropDownMenu.Items.Add(GodName);
+                //}
+                //this.DropDownMenu.SelectedIndex = 0;
+                #endregion
 
+                legalBoots = itemCol.retrieveLegalBoots(true, true, true, "m");
+                legalItems = itemCol.retrieveLegalItems(true, true, true, "m");
+                legalRelics = itemCol.retrieveLegalRelics(true, true, true, "m");
+                legalStarters = itemCol.retrieveLegalStarters(true, true, true, "m");
+                firstLoad = false;
+            }
+            else
+            {
+                Page.Title = "DankSmite " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
+
+            }
         }
+
+
+        //protected void Page_Load(object sender, EventArgs e)
+        //{
+        //    name = "Other stuff";
+        //    //InitializeComponent();
+        //    //WelcomeButton_Click(null, null);
+        //    Page.Title = "DankSmite " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
+
+        //    #region Dropdown
+        //    //foreach (string GodName in AllActualGods)
+        //    //{
+        //    //    this.DropDownMenu.Items.Add(GodName);
+        //    //}
+        //    //this.DropDownMenu.SelectedIndex = 0;
+        //    #endregion
+
+        //    //legalBoots = itemCol.retrieveLegalBoots(true, true, true, "m");
+        //    //legalItems = itemCol.retrieveLegalItems(true, true, true, "m");
+        //    //legalRelics = itemCol.retrieveLegalRelics(true, true, true, "m");
+        //    //legalStarters = itemCol.retrieveLegalStarters(true, true, true, "m");
+
+
+        //}
 
         #region God Input
         //private void TextInput_KeyPress(object sender, KeyEventArgs e)
@@ -226,7 +262,7 @@ namespace DankSmiteOnline2
         {
             //Setup for next roll
 
-            //this.GeneralTextBox.Visible = false;
+            this.GeneralTextBox.Visible = false;
             this.CurrentItemNameLabel.Text = "";
             RerollNumber.Text = 0.ToString();
             CredsFlag = false;
@@ -381,85 +417,91 @@ namespace DankSmiteOnline2
             this.ItemLabel4.Visible = true;
             this.ItemLabel5.Visible = true;
             this.ItemLabel6.Visible = true;
-            clickedRebuild = true;
+            //clickedRebuild = true;
 
             Draw();
 
         }
         #endregion
 
-        //#region HelpAndCredits
-        //private void CreditsButon_Click(object sender, EventArgs e)
-        //{
-        //    if (CredsFlag == false)
-        //    {
-        //        GeneralTextBox.Text = "Created by: Trickermand, Nazzyc, Kloppermand.\n\nSmite is property of Hi-Rez studio" +
-        //                            ". All pictures are created and owned by Hi-Rez Studio\n\nBorders created by to J. W. Bjerk.";
-        //        CredsFlag = true;
-        //        WelcomeFlag = false;
-        //        DetailsFlag = false;
-        //        this.GeneralTextBox.Visible = true;
-        //    }
-        //    else
-        //    {
-        //        CredsFlag = false;
-        //        WelcomeFlag = false;
-        //        DetailsFlag = false;
-        //        this.GeneralTextBox.Visible = false;
-        //    }
-        //}
+        #region HelpAndCredits
+        public void CreditsButon_Click(object sender, EventArgs e)
+        {
+            if (CredsFlag == false)
+            {
+                GeneralTextBox.Text = "Created by: Trickermand, Nazzyc, Kloppermand.\n\nSmite is property of Hi-Rez studio" +
+                                    ". All pictures are created and owned by Hi-Rez Studio<br\\>\nBorders created by to J. W. Bjerk.";
+                CredsFlag = true;
+                WelcomeFlag = false;
+                DetailsFlag = false;
+                this.GeneralTextBox.Visible = true;
+            }
+            else
+            {
+                CredsFlag = false;
+                WelcomeFlag = false;
+                DetailsFlag = false;
+                this.GeneralTextBox.Visible = false;
+            }
+        }
 
 
-        //private void WelcomeButton_Click(object sender, EventArgs e)
-        //{
-        //    if (WelcomeFlag == false)
-        //    {
-        //        GeneralTextBox.Text = "\n\n\n\n\nHappy birthday Klopper";
-        //        //GeneralTextBox.Text = "Welcome to DankSmite!\nClick the Build button to get a god and a build! C" +
-        //        //                    "lick the pictures to reroll them, should you want to do so!\n\n\nWorks for smite ve" +
-        //        //                    "rsion: " + SmiteVersion + "\nDanksmite version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
-        //        CredsFlag = false;
-        //        WelcomeFlag = true;
-        //        DetailsFlag = false;
-        //        this.GeneralTextBox.Visible = true;
-        //    }
-        //    else
-        //    {
-        //        CredsFlag = false;
-        //        WelcomeFlag = false;
-        //        DetailsFlag = false;
-        //        this.GeneralTextBox.Visible = false;
-        //    }
-        //}
+        public void WelcomeButton_Click(object sender, EventArgs e)
+        {
+            if (WelcomeFlag == false)
+            {
+                if (DateTime.Now.Date.ToString("MM-dd") == "12-09")
+                {
+                    GeneralTextBox.Text = "\n\n\n\n\nHappy birthday Kloppermand";
+                }
+                else
+                {
+                    GeneralTextBox.Text = "Welcome to DankSmite!\nClick the Build button to get a god and a build! Click the pictures to reroll them, should you want to do so!\n\n\nWorks for smite version: " + SmiteVersion + "\nDanksmite version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
 
-        //private void DetailsButton_Click(object sender, EventArgs e)
-        //{
-        //    if (DetailsFlag == false)
-        //    {
-        //        GeneralTextBox.Text = "Version of DankSmite is " + Assembly.GetExecutingAssembly().GetName().Version.ToString(4);
-        //        CredsFlag = false;
-        //        WelcomeFlag = false;
-        //        DetailsFlag = true;
-        //        this.GeneralTextBox.Visible = true;
-        //    }
-        //    else
-        //    {
-        //        CredsFlag = false;
-        //        WelcomeFlag = false;
-        //        DetailsFlag = false;
-        //        this.GeneralTextBox.Visible = false;
-        //    }
-        //}
+                }
+
+                CredsFlag = false;
+                WelcomeFlag = true;
+                DetailsFlag = false;
+                this.GeneralTextBox.Visible = true;
+            }
+            else
+            {
+                CredsFlag = false;
+                WelcomeFlag = false;
+                DetailsFlag = false;
+                this.GeneralTextBox.Visible = false;
+            }
+        }
+
+        public void DetailsButton_Click(object sender, EventArgs e)
+        {
+            if (DetailsFlag == false)
+            {
+                GeneralTextBox.Text = "Version of DankSmite is " + Assembly.GetExecutingAssembly().GetName().Version.ToString(4);
+                CredsFlag = false;
+                WelcomeFlag = false;
+                DetailsFlag = true;
+                this.GeneralTextBox.Visible = true;
+            }
+            else
+            {
+                CredsFlag = false;
+                WelcomeFlag = false;
+                DetailsFlag = false;
+                this.GeneralTextBox.Visible = false;
+            }
+        }
 
 
-        //#endregion
+        #endregion
 
         #region Rerolls
 
         public void GodPicture_Click(object sender, EventArgs e)
         {
-            if (clickedRebuild)
-            {
+            //if (clickedRebuild)
+            //{
                 int RerollAmount = Int32.Parse(RerollNumber.Text);
                 rerollGod();
                 DrawGodPictureBox(GodPicture);
@@ -473,7 +515,7 @@ namespace DankSmiteOnline2
                 {
                     RerollNumber.Text = RerollAmount.ToString();
                 }
-            }
+            //}
         }
 
         public void StarterItemPicture_Click(object sender, EventArgs e)
@@ -525,8 +567,8 @@ namespace DankSmiteOnline2
 
         public void rerollItemWrapper(int i, System.Web.UI.WebControls.Image item, System.Web.UI.WebControls.ImageButton frame)
         {
-            if (clickedRebuild)
-            {
+            //if (clickedRebuild)
+            //{
                 int RerollAmount = Int32.Parse(RerollNumber.Text);
                 rerollItem(i);
                 AssignBorder(i, frame);
@@ -543,7 +585,7 @@ namespace DankSmiteOnline2
                 {
                     RerollNumber.Text = RerollAmount.ToString();
                 }
-            }
+            //}
 
 
         }

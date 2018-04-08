@@ -199,17 +199,36 @@
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
+    
+    <div class="GeneralTextBoxPanel" style="position: absolute; left:420px; top:350px; width: 400px; background-color:grey">
+        <asp:UpdatePanel ID="GeneralTextBoxPanel" runat="server">
+            <ContentTemplate>
+                
+                <asp:Label ID="GeneralTextBox" runat="server" Text="Default" Font-Size="25px" ForeColor="#ff9900"/>
+                
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+
+    <div class="ButtonPanel">        
+        <asp:UpdatePanel ID="ButtonPanel" runat="server">
+            <ContentTemplate>
+
+                <asp:Button ID="CreditsButton" runat="server" Text="Credits" OnClick="CreditsButon_Click"/>
+                <asp:Button ID="WelcomeButton" runat="server" Text="Welcome!" OnClick="WelcomeButton_Click"/>
+                
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
 
 
     <div class="RerollUpdatePanel">        
         <asp:UpdatePanel ID="RerollUpdatePanel" runat="server">
             <ContentTemplate>
-                <%-- ================================= Items and God ================================== --%>
+
+                <asp:Label ID="RerollLabel" runat="server" Text="Rerolls" Font-Size="50px" ForeColor="Red" Font-Bold="true"/>
+                <asp:Label ID="RerollNumber" runat="server" Text="0" Font-Size="50px"/>
                 
-                <asp:Label ID="RerollLabel" runat="server" Text="Rerolls" Font-Size="10px" ForeColor="Red" Font-Bold="true"/>
-                <asp:Label ID="RerollNumber" runat="server" Text="0" Font-Size="20"/>
-                
-                <%-- ========================================================================== --%>
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
