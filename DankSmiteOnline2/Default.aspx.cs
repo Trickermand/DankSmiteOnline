@@ -71,13 +71,13 @@ namespace DankSmiteOnline2
             set { _god = value; }
         }
         
-
         protected void Page_Load(object sender, EventArgs e)
         {
+            CurrentItemNameLabel.Attributes.Add("onmouseover", ItemFrame1.ClientID + Build[0].name.Replace('_', ' '));
             if (firstLoad)
             {
                 //InitializeComponent();
-                WelcomeButton_Click(null, null);
+                //WelcomeButton_Click(null, null);
                 Page.Title = "DankSmite " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
 
                 #region Dropdown
@@ -88,17 +88,32 @@ namespace DankSmiteOnline2
                 //this.DropDownMenu.SelectedIndex = 0;
                 #endregion
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, "m");
-                legalItems = itemCol.retrieveLegalItems(true, true, true, "m");
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, "m");
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, "m");
+                BuildButton_Click(null, null);
+
+                //legalBoots = itemCol.retrieveLegalBoots(true, true, true, "m");
+                //legalItems = itemCol.retrieveLegalItems(true, true, true, "m");
+                //legalRelics = itemCol.retrieveLegalRelics(true, true, true, "m");
+                //legalStarters = itemCol.retrieveLegalStarters(true, true, true, "m");
                 firstLoad = false;
+
+                Timer t = new Timer();
+                t.Interval = 50;
+                t.Tick += UpdateCurrentItemLabel;
+
+
+
             }
             else
             {
-                Page.Title = "DankSmite " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
-
+                //Page.Title = "DankSmite " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
+                
             }
+        }
+
+        private void UpdateCurrentItemLabel(object sender, EventArgs e)
+        {
+
+
         }
 
 
@@ -195,6 +210,10 @@ namespace DankSmiteOnline2
                 case "cate":
                     tempText = "bastet";
                     break;
+                case "bell":
+                case "bella":
+                    tempText = "bellona";
+                    break;
                 case "cama":
                 case "camasucks":
                     tempText = "camazotz";
@@ -235,6 +254,7 @@ namespace DankSmiteOnline2
                 case "morrigan":
                     tempText = "the morrigan";
                     break;
+                case "thormcshitterfuck":
                 case "mcshitterfuck":
                 case "mc shitterfuck":
                     //this.BackgroundImage = global::DankSmite.Properties.Resources.thor;
@@ -261,9 +281,15 @@ namespace DankSmiteOnline2
         public void BuildButton_Click(object sender, EventArgs e)
         {
             //Setup for next roll
+            
+            //this.GeneralTextBox.Visible = false;
 
-            this.GeneralTextBox.Visible = false;
-            this.CurrentItemNameLabel.Text = "";
+            GeneralTextBox.Text = "Welcome to DankSmite!\nClick the Build button to get a god and a build! C" +
+                                "lick the pictures to reroll them, should you want to do so!\n\n\nWorks for smite ve" +
+                                "rsion: " + SmiteVersion + "\nDanksmite version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
+
+            //this.GeneralTextBox.Visible = false;
+            //this.CurrentItemNameLabel.Text = "";
             RerollNumber.Text = 0.ToString();
             CredsFlag = false;
             WelcomeFlag = false;
@@ -273,10 +299,6 @@ namespace DankSmiteOnline2
             GodNameInterpreter();
 
             //Some dankness
-
-
-
-
 
             #region Dank
             if (InputField.Text == "op")
@@ -445,7 +467,7 @@ namespace DankSmiteOnline2
             }
         }
 
-
+        
         public void WelcomeButton_Click(object sender, EventArgs e)
         {
             if (WelcomeFlag == false)
@@ -454,10 +476,13 @@ namespace DankSmiteOnline2
                 {
                     GeneralTextBox.Text = "\n\n\n\n\nHappy birthday Kloppermand";
                 }
+                else if (DateTime.Now.Date.ToString("MM-dd") == "11-04")
+                {
+                    GeneralTextBox.Text = "\n\n\n\n\nHappy birthday Nazzyc";
+                }
                 else
                 {
                     GeneralTextBox.Text = "Welcome to DankSmite!\nClick the Build button to get a god and a build! Click the pictures to reroll them, should you want to do so!\n\n\nWorks for smite version: " + SmiteVersion + "\nDanksmite version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
-
                 }
 
                 CredsFlag = false;

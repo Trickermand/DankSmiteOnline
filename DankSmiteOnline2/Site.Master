@@ -13,6 +13,37 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <script lang="JavaScript">
+        document.onmousemove = getCoordinate;
+        var mosX = 0 ;
+        var mosY = 0 ;
+        function getCoordinate(e)
+        {
+        mosX = event.clientX + document.body.scrollLeft ;
+
+        //clientX Property Sets or retrieves the x-coordinate of the mouse
+        //pointer's position relative to the client area of the window,
+        //excluding window decorations and scroll bars
+        //scrollLeft Property Sets or retrieves the distance between the
+        //left edge of the object and the leftmost portion of the content
+        //currently visible in the window.
+
+        mosY = event.clientY + document.body.scrollTop;
+
+        //clientY Property Sets or retrieves the y-coordinate of the mouse
+        //pointer's position relative to the client area of the window,
+        //excluding window decorations and scroll bars.
+        //scrollTop Property Sets or retrieves the distance between the top
+        //of the object and the topmost portion of the content currently
+        //visible in the window.
+
+        document.title = "(X Co-Ordinate » "+ mosX +") ( "+"Y Co-ordinate » " +mosY+")";
+        document.getElementById('dx').innerHTML = "Mouse X ==» "+mosX+"<br>"+"Mouse Y ==» "+mosY;
+
+        return true
+        }
+    </script>
     
 </head>
 <body>

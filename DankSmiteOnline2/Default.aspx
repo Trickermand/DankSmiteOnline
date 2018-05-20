@@ -14,6 +14,7 @@
         </asp:UpdatePanel>
     </div>
 
+   <%-- Checkbox section --%>
     <div class="ItemUpdatePanel" style="position:relative; left: 595px; top: 120px;">        
         <asp:UpdatePanel ID="UpdatePanel3" runat="server">
             <ContentTemplate>
@@ -60,7 +61,7 @@
                             <div style="position: absolute; left: 0; top:0;">
                                 <asp:Image ID="ItemPicture1" runat="server" ImageUrl="~/Resources/ichaival.png"/>
                             </div>
-                            <div  style="position: absolute; left: 0; top:0;" onmouseover="pictureBox1_Hover()">
+                            <div  style="position: absolute; left: 0; top:0;" onmouseover="pictureBox1_Hover">
                                 <asp:ImageButton ID="ItemFrame1" runat="server" ImageUrl="~/Resources/ItemFrameNeutral.png" OnClick="ItemPicture1_Click"/>
                             </div>
                         </div>
@@ -234,8 +235,23 @@
     </div>
 
 
+    </div>
 
 
+        <%--<div class="GeneralTextBoxPanel">        
+        <asp:UpdatePanel ID="GeneralTextBoxPanel1" runat="server">
+            <ContentTemplate>
+                <%-- ================================= Generals purpose text box ================================== 
+                <div style="position: absolute; left: 421px; top: 370px; height: 600px; width: 600px">
+                    <asp:TextBox ID="GeneralTextBox1" runat="server" text="Default" Font-Size="24px" ForeColor="#cc00ff" Font-Bold="true" BackColor="#336600" Height="400px" Width="400px"/>
+                    
+                     
+                </div>
+                <%--<asp:Label ID="Label1" runat="server" Text="Rerolls" Font-Size="10px" ForeColor="Red" Font-Bold="true"/>
+                
+                <%-- ========================================================================== 
+            </ContentTemplate>
+        </asp:UpdatePanel>--%>
 
     <%--<div class="jumbotron">
         <h1>ASP.NET</h1>
