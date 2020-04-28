@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DankSmite", "DankSmite\Dank
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempProject", "TempProject\TempProject.csproj", "{1591285A-6588-4283-9F96-D95E02D80917}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodsAndItems", "GodsAndItems\GodsAndItems.csproj", "{FEF1CAB9-832C-44E5-A0CC-EB2B4250AAA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{1591285A-6588-4283-9F96-D95E02D80917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1591285A-6588-4283-9F96-D95E02D80917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1591285A-6588-4283-9F96-D95E02D80917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF1CAB9-832C-44E5-A0CC-EB2B4250AAA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF1CAB9-832C-44E5-A0CC-EB2B4250AAA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF1CAB9-832C-44E5-A0CC-EB2B4250AAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF1CAB9-832C-44E5-A0CC-EB2B4250AAA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
