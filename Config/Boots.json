@@ -1,0 +1,60 @@
+{
+  "Boots": [
+    {
+      "Name": "Ninja Tabi",
+      "FileName": "Resources\\Items\\ninja-tabi.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Warrior Tabi",
+      "FileName": "Resources\\Items\\warrior-tabi.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Reinforced Greaves",
+      "FileName": "Resources\\Items\\reinforced-greaves.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Talaria Boots",
+      "FileName": "Resources\\Items\\talaria-boots.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Shoes of Focus",
+      "FileName": "Resources\\Items\\shoes-of-focus.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Shoes of the Magi",
+      "FileName": "Resources\\Items\\shoes-of-the-magi.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Reinforced Shoes",
+      "FileName": "Resources\\Items\\reinforced-shoes.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Traveler's Shoes",
+      "FileName": "Resources\\Items\\travelers-shoes.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    }
+  ]
+}

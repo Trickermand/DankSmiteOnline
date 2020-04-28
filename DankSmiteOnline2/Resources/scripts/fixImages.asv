@@ -1,0 +1,19 @@
+clear
+close all
+
+items = dir('../Temp');
+items = items(3:end);
+
+for i = 1:length(items)
+    map = [];
+    [img, map] = imread([items(i).folder '\' items(i).name],'png');
+    if size(map) > 0
+        img = ind2rgb(img,map);
+    end
+    imwrite(img,['C:\Users\Klopper\Desktop\DankSmite\Smite Icons\Items128\' items(i).name],'png')
+end
+
+%%
+fap = imread([items(i).folder '\' items(i-2).name]);
+gg = ind2rgb(fap,map);
+imshow(fap)

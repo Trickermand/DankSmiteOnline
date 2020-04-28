@@ -10,15 +10,13 @@ using System.Drawing;
 using gaiController;
 using System.Reflection;
 using DankSmite.Properties;
+using System.Configuration;
 
 namespace DankSmiteOnline2
 {
     public partial class _Default : Page
     {
-
-
-
-
+        
         //public List<string> AllActualGods = godCol.retrieveAllGodNames();
 
         ////public Form1()
@@ -39,25 +37,26 @@ namespace DankSmiteOnline2
 
 
         static Item[] _build = new Item[9] {
-            new Item("","",false, false, false),
-            new Item("","",false, false, false),
-            new Item("","",false, false, false),
-            new Item("","",false, false, false),
-            new Item("","",false, false, false),
-            new Item("","",false, false, false),
-            new Item("","",false, false, false),
-            new Item("","",false, false, false),
-            new Item("","",false, false, false)
+            new Item("", "", GodType.Warrior, ItemColorType.NoColor, MapTypes.Conquest),
+            new Item("", "", GodType.Warrior, ItemColorType.NoColor, MapTypes.Conquest),
+            new Item("", "", GodType.Warrior, ItemColorType.NoColor, MapTypes.Conquest),
+            new Item("", "", GodType.Warrior, ItemColorType.NoColor, MapTypes.Conquest),
+            new Item("", "", GodType.Warrior, ItemColorType.NoColor, MapTypes.Conquest),
+            new Item("", "", GodType.Warrior, ItemColorType.NoColor, MapTypes.Conquest),
+            new Item("", "", GodType.Warrior, ItemColorType.NoColor, MapTypes.Conquest),
+            new Item("", "", GodType.Warrior, ItemColorType.NoColor, MapTypes.Conquest),
+            new Item("", "", GodType.Warrior, ItemColorType.NoColor, MapTypes.Conquest)
         };
 
-        static God _god = new God("", "");
+        static God _god = new God("", "", "");
         static List<God> legalGods;
         static List<Item> legalItems;
         static List<Item> legalBoots;
         static List<Item> legalRelics;
         static List<Item> legalStarters;
-        static GodCollector godCol = new GodCollector();
-        static ItemCollector itemCol = new ItemCollector();
+        static GodCollector godCol;
+        static ItemCollector itemCol;
+
         private Random rnd = new Random();
 
         public static Item[] Build
@@ -65,7 +64,7 @@ namespace DankSmiteOnline2
             get { return _build; }
             set { _build = value; }
         }
-        public static God God
+        public static God god
         {
             get { return _god; }
             set { _god = value; }
@@ -229,6 +228,9 @@ namespace DankSmiteOnline2
                 case "chuchu":
                     tempText = "cu chulainn";
                     break;
+                case "herc":
+                    tempText = "hercules";
+                    break;
                 case "iza":
                     tempText = "izanami";
                     break;
@@ -263,7 +265,7 @@ namespace DankSmiteOnline2
                     break;
                 case "xaba":
                 case "xballer": //Nazzyc is a retard - Splatt will not erase this line//
-                case "xba":
+                case "xbab":
                     tempText = "xbalanque";
                     break;
                 case "xing":
@@ -280,8 +282,11 @@ namespace DankSmiteOnline2
         #region Build button
         public void BuildButton_Click(object sender, EventArgs e)
         {
+            godCol = new GodCollector();
+            itemCol = new ItemCollector(MapSelectionList.SelectedValue);
+
             //Setup for next roll
-            
+
             //this.GeneralTextBox.Visible = false;
 
             GeneralTextBox.Text = "Welcome to DankSmite!\nClick the Build button to get a god and a build! C" +
@@ -304,75 +309,75 @@ namespace DankSmiteOnline2
             if (InputField.Text == "op")
             {
 
-                _god = new God("Ymir", "g");
-                for (int i = 0; i < 6; i++)
-                {
-                    Build[i] = new Item("Deathbringer", "dmg", false, true, false);
-                }
-                Build[6] = new Item("Blink_Rune", "dmg", true, true, false);
-                Build[7] = new Item("Blink_Rune", "dmg", true, true, false);
-                Build[8] = new Item("Deathbringer", "dmg", false, true, false);
+                //_god = new God("Ymir", "g");
+                //for (int i = 0; i < 6; i++)
+                //{
+                //    Build[i] = new Item("Deathbringer", "DeathBringer.png", GodType.Guardian, ItemColorType.Damage, MapTypes.Joust);
+                //}
+                //Build[6] = new Item("Blink_Rune", "Blink-Rune-png", GodType.Guardian, ItemColorType.Damage, MapTypes.Joust);
+                //Build[7] = new Item("Blink_Rune", "Blink-Rune-png", GodType.Guardian, ItemColorType.Damage, MapTypes.Joust);
+                //Build[8] = new Item("Deathbringer", "DeathBringer.png", GodType.Guardian, ItemColorType.Damage, MapTypes.Joust);
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, God.type);
-                legalItems = itemCol.retrieveLegalItems(true, true, true, God.type);
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, God.type);
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, God.type);
+                //legalBoots = itemCol.RetrieveLegalBoots(new List<ItemColorType> { ItemColorType.Damage }, GodType.Guardian);
+                //legalItems = itemCol.RetrieveLegalItems(new List<ItemColorType> { ItemColorType.Damage }, GodType.Guardian);
+                //legalRelics = itemCol.RetrieveLegalRelics();
+                //legalStarters = itemCol.RetrieveLegalStarters(new List<ItemColorType> { ItemColorType.Damage }, GodType.Guardian);
             }
             else if (InputField.Text.ToLower() == "trickermand")
             {
-                _god = new God("Ymir", "g");
+                //_god = new God("Ymir", "g");
 
-                Build[0] = new Item("Shoes_of_the_Magi", "dmg", true, false, false);
-                Build[1] = new Item("Dynasty_Plate_Helm", "hyb", true, false, false);
-                Build[2] = new Item("BreastPlate_of_Valor", "def", true, true, false);
-                Build[3] = new Item("Hide_of_the_Urchin", "def", true, true, false);
-                Build[5] = new Item("Shogun's_Kusari", "dmg", true, false, false);
-                Build[4] = new Item("Obsidian_Shard", "dmg", true, false, false);
+                //Build[0] = new Item("Shoes_of_the_Magi", "dmg", true, false, false);
+                //Build[1] = new Item("Dynasty_Plate_Helm", "hyb", true, false, false);
+                //Build[2] = new Item("BreastPlate_of_Valor", "def", true, true, false);
+                //Build[3] = new Item("Hide_of_the_Urchin", "def", true, true, false);
+                //Build[5] = new Item("Shogun's_Kusari", "dmg", true, false, false);
+                //Build[4] = new Item("Obsidian_Shard", "dmg", true, false, false);
 
-                Build[6] = new Item("Blink_Rune", "dmg", true, true, false);
-                Build[7] = new Item("Magic_Shell", "dmg", true, true, false);
-                Build[8] = new Item("Mark_of_the_Vanguard", "dmg", false, true, false);
+                //Build[6] = new Item("Blink_Rune", "dmg", true, true, false);
+                //Build[7] = new Item("Magic_Shell", "dmg", true, true, false);
+                //Build[8] = new Item("Mark_of_the_Vanguard", "dmg", false, true, false);
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, God.type);
-                legalItems = itemCol.retrieveLegalItems(true, true, true, God.type);
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, God.type);
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, God.type);
+                //legalBoots = itemCol.RetrieveLegalBoots(true, true, true, God.godType);
+                //legalItems = itemCol.RetrieveLegalItems(true, true, true, God.godType);
+                //legalRelics = itemCol.RetrieveLegalRelics(true, true, true, God.godType);
+                //legalStarters = itemCol.RetrieveLegalStarters(true, true, true, God.godType);
             }
             else if (InputField.Text.ToLower() == "nazzyc")
             {
-                _god = new God("Medusa", "h");
-                for (int i = 0; i < 6; i++)
-                {
-                    Build[i] = new Item("Odysseus'_Bow", "dmg", false, true, false);
-                }
-                Build[6] = new Item("Bracer_of_Undoing", "def", true, true, false);
-                Build[7] = new Item("Bracer_of_Undoing", "def", true, true, false);
-                Build[8] = new Item("Odysseus'_Bow", "dmg", false, true, false);
+                //_god = new God("Medusa", "h");
+                //for (int i = 0; i < 6; i++)
+                //{
+                //    Build[i] = new Item("Odysseus'_Bow", "dmg", false, true, false);
+                //}
+                //Build[6] = new Item("Bracer_of_Undoing", "def", true, true, false);
+                //Build[7] = new Item("Bracer_of_Undoing", "def", true, true, false);
+                //Build[8] = new Item("Odysseus'_Bow", "dmg", false, true, false);
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, God.type);
-                legalItems = itemCol.retrieveLegalItems(true, true, true, God.type);
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, God.type);
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, God.type);
+                //legalBoots = itemCol.RetrieveLegalBoots(true, true, true, God.godType);
+                //legalItems = itemCol.RetrieveLegalItems(true, true, true, God.godType);
+                //legalRelics = itemCol.RetrieveLegalRelics(true, true, true, God.godType);
+                //legalStarters = itemCol.RetrieveLegalStarters(true, true, true, God.godType);
             }
             else if (InputField.Text.ToLower() == "kloppermand")
             {
-                _god = new God("Ares", "g");
+                //_god = new God("Ares", "g");
 
-                Build[0] = new Item("Shoes_of_the_Magi", "dmg", true, false, false);
-                Build[1] = new Item("Void_Stone", "hyb", true, false, false);
-                Build[2] = new Item("Mystical_Mail", "def", true, true, false);
-                Build[3] = new Item("Hide_of_the_Urchin", "def", true, true, false);
-                Build[4] = new Item("Obsidian_Shard", "dmg", true, false, false);
-                Build[5] = new Item("Rod_of_Tahuti", "dmg", true, false, false);
+                //Build[0] = new Item("Shoes_of_the_Magi", "dmg", true, false, false);
+                //Build[1] = new Item("Void_Stone", "hyb", true, false, false);
+                //Build[2] = new Item("Mystical_Mail", "def", true, true, false);
+                //Build[3] = new Item("Hide_of_the_Urchin", "def", true, true, false);
+                //Build[4] = new Item("Obsidian_Shard", "dmg", true, false, false);
+                //Build[5] = new Item("Rod_of_Tahuti", "dmg", true, false, false);
 
-                Build[6] = new Item("Blink_Rune", "hyb", true, true, false);
-                Build[7] = new Item("Shield_of_Thorns", "def", true, true, false);
-                Build[8] = new Item("Mark_of_the_Vanguard", "def", true, true, false);
+                //Build[6] = new Item("Blink_Rune", "hyb", true, true, false);
+                //Build[7] = new Item("Shield_of_Thorns", "def", true, true, false);
+                //Build[8] = new Item("Mark_of_the_Vanguard", "def", true, true, false);
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, God.type);
-                legalItems = itemCol.retrieveLegalItems(true, true, true, God.type);
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, God.type);
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, God.type);
+                //legalBoots = itemCol.RetrieveLegalBoots(true, true, true, God.godType);
+                //legalItems = itemCol.RetrieveLegalItems(true, true, true, God.godType);
+                //legalRelics = itemCol.RetrieveLegalRelics(true, true, true, God.godType);
+                //legalStarters = itemCol.RetrieveLegalStarters(true, true, true, God.godType);
             }
             #endregion
 
@@ -390,55 +395,41 @@ namespace DankSmiteOnline2
 
                 if (string.IsNullOrEmpty(InputField.Text))
                 {
-                    fullRebuild(
-                    this.GuardianCheckbox.Checked,
-                    this.MageCheckbox.Checked,
-                    this.HunterCheckbox.Checked,
-                    this.AssassinCheckbox.Checked,
-                    this.WarriorCheckbox.Checked,
-                    this.DamageCheckbox.Checked,
-                    this.HybridCheckbox.Checked,
-                    this.DefenseCheckbox.Checked
-                    );
+                    FullRebuild(CreateItemTypeListFromCheckBoxes(), CreateGodTypeListFromCheckBoxes());
                 }
                 else
                 {
-                    fullRebuild(
-                    InputField.Text,
-                    this.DamageCheckbox.Checked,
-                    this.HybridCheckbox.Checked,
-                    this.DefenseCheckbox.Checked
-                    );
+                    FullRebuild(InputField.Text, CreateItemTypeListFromCheckBoxes());
                 }
 
             }
             else
             {
-                _god = new God("Ymir", "g");
+                _god = new God("Ymir", GodType.Guardian, "Ymir.png");
                 for (int i = 0; i < 6; i++)
                 {
-                    Build[i] = new Item("Deathbringer", "dmg", false, true, false);
+                    Build[i] = new Item("Deathbringer", "DeathBringer.png", GodType.Guardian, ItemColorType.Damage, MapTypes.Joust);
                 }
-                Build[6] = new Item("Blink_Rune", "dmg", true, true, false);
-                Build[7] = new Item("Blink_Rune", "dmg", true, true, false);
-                Build[8] = new Item("Deathbringer", "dmg", false, true, false);
+                Build[6] = new Item("Blink_Rune", "Blink-Rune-png", GodType.Guardian, ItemColorType.Damage, MapTypes.Joust);
+                Build[7] = new Item("Blink_Rune", "Blink-Rune-png", GodType.Guardian, ItemColorType.Damage, MapTypes.Joust);
+                Build[8] = new Item("Deathbringer", "DeathBringer.png", GodType.Guardian, ItemColorType.Damage, MapTypes.Joust);
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, God.type);
-                legalItems = itemCol.retrieveLegalItems(true, true, true, God.type);
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, God.type);
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, God.type);
+                legalBoots = itemCol.RetrieveLegalBoots(new List<ItemColorType> { ItemColorType.Damage }, GodType.Guardian);
+                legalItems = itemCol.RetrieveLegalItems(new List<ItemColorType> { ItemColorType.Damage }, GodType.Guardian);
+                legalRelics = itemCol.RetrieveLegalRelics();
+                legalStarters = itemCol.RetrieveLegalStarters(new List<ItemColorType> { ItemColorType.Damage }, GodType.Guardian);
             }
 
             //Sets labels
-            this.StarterItemLabel.Visible = true;
-            this.RelicLabel1.Visible = true;
-            this.RelicLabel2.Visible = true;
-            this.ItemLabel1.Visible = true;
-            this.ItemLabel2.Visible = true;
-            this.ItemLabel3.Visible = true;
-            this.ItemLabel4.Visible = true;
-            this.ItemLabel5.Visible = true;
-            this.ItemLabel6.Visible = true;
+            //this.StarterItemLabel.Visible = true;
+            //this.RelicLabel1.Visible = true;
+            //this.RelicLabel2.Visible = true;
+            //this.ItemLabel1.Visible = true;
+            //this.ItemLabel2.Visible = true;
+            //this.ItemLabel3.Visible = true;
+            //this.ItemLabel4.Visible = true;
+            //this.ItemLabel5.Visible = true;
+            //this.ItemLabel6.Visible = true;
             //clickedRebuild = true;
 
             Draw();
@@ -518,6 +509,11 @@ namespace DankSmiteOnline2
             }
         }
 
+        public void DisclaimerButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         #endregion
 
@@ -528,7 +524,7 @@ namespace DankSmiteOnline2
             //if (clickedRebuild)
             //{
                 int RerollAmount = Int32.Parse(RerollNumber.Text);
-                rerollGod();
+                RerollGod();
                 DrawGodPictureBox(GodPicture);
                 AssignGodBorder(GodFrame);
                 RerollAmount++;
@@ -545,59 +541,59 @@ namespace DankSmiteOnline2
 
         public void StarterItemPicture_Click(object sender, EventArgs e)
         {
-            rerollItemWrapper(8, StarterItemPicture, StarterItemFrame);
+            RerollItemWrapper(8, StarterItemPicture, StarterItemFrame);
         }
 
 
 
         public void ItemPicture1_Click(object sender, EventArgs e)
         {
-            rerollItemWrapper(0, ItemPicture1, ItemFrame1);
+            RerollItemWrapper(0, ItemPicture1, ItemFrame1);
         }
 
         public void ItemPicture2_Click(object sender, EventArgs e)
         {
-            rerollItemWrapper(1, ItemPicture2, ItemFrame2);
+            RerollItemWrapper(1, ItemPicture2, ItemFrame2);
         }
 
         public void ItemPicture3_Click(object sender, EventArgs e)
         {
-            rerollItemWrapper(2, ItemPicture3, ItemFrame3);
+            RerollItemWrapper(2, ItemPicture3, ItemFrame3);
         }
 
         public void ItemPicture4_Click(object sender, EventArgs e)
         {
-            rerollItemWrapper(3, ItemPicture4, ItemFrame4);
+            RerollItemWrapper(3, ItemPicture4, ItemFrame4);
         }
 
         public void ItemPicture5_Click(object sender, EventArgs e)
         {
-            rerollItemWrapper(4, ItemPicture5, ItemFrame5);
+            RerollItemWrapper(4, ItemPicture5, ItemFrame5);
         }
 
         public void ItemPicture6_Click(object sender, EventArgs e)
         {
-            rerollItemWrapper(5, ItemPicture6, ItemFrame6);
+            RerollItemWrapper(5, ItemPicture6, ItemFrame6);
         }
 
         public void RelicPicture1_Click(object sender, EventArgs e)
         {
-            rerollItemWrapper(6, RelicPicture1, RelicFrame1);
+            RerollItemWrapper(6, RelicPicture1, RelicFrame1);
         }
 
         public void RelicPicture2_Click(object sender, EventArgs e)
         {
-            rerollItemWrapper(7, RelicPicture2, RelicFrame2);
+            RerollItemWrapper(7, RelicPicture2, RelicFrame2);
         }
 
-        public void rerollItemWrapper(int i, System.Web.UI.WebControls.Image item, System.Web.UI.WebControls.ImageButton frame)
+        public void RerollItemWrapper(int i, System.Web.UI.WebControls.Image item, System.Web.UI.WebControls.ImageButton frame)
         {
             //if (clickedRebuild)
             //{
                 int RerollAmount = Int32.Parse(RerollNumber.Text);
-                rerollItem(i);
+                RerollItem(i);
                 AssignBorder(i, frame);
-                item.ImageUrl = NamingFormatter(Build[i].name);
+                item.ImageUrl = Build[i].fileName;
                     
 
                 //CurrentItemNameLabel.Text = Build[i].name.Replace('_', ' ');
@@ -619,15 +615,15 @@ namespace DankSmiteOnline2
         {
             if (i < 6 && i != 0)
             {
-                if (Build[i].itemColor.Equals("dmg"))
+                if (Build[i].itemColorType == ItemColorType.Damage)
                 {
                     pictureBox.ImageUrl = "~/Resources/ItemFrameDamage.png";
                 }
-                else if (Build[i].itemColor.Equals("hyb"))
+                else if (Build[i].itemColorType == ItemColorType.Hybrid)
                 {
                     pictureBox.ImageUrl = "~/Resources/ItemFrameHybrid.png";
                 }
-                else if (Build[i].itemColor.Equals("def"))
+                else if (Build[i].itemColorType == ItemColorType.Defense)
                 {
                     pictureBox.ImageUrl = "~/Resources/ItemFrameDefense.png";
                 }
@@ -640,14 +636,10 @@ namespace DankSmiteOnline2
 
         private void AssignGodBorder(System.Web.UI.WebControls.ImageButton pictureBox)
         {
-            if (_god.type.Equals("g") || _god.type.Equals("m"))
-            {
+            if (_god.godType == GodType.Guardian || _god.godType == GodType.Mage)
                 pictureBox.ImageUrl = "~/Resources/DankFrameBlue.png";
-            }
             else
-            {
                 pictureBox.ImageUrl = "~/Resources/DankFrameRed.png";
-            }
         }
 
         #endregion
@@ -682,8 +674,8 @@ namespace DankSmiteOnline2
             this.GodPicture.Enabled = true;
             this.GodPicture.Visible = true;
             this.GodLabel.Visible = true;
-            this.RerollLabel.Visible = true;
-            this.RerollNumber.Visible = true;
+            //this.RerollLabel.Visible = true;
+            //this.RerollNumber.Visible = true;
 
 
             AssignBorder(0, ItemFrame1);
@@ -697,42 +689,33 @@ namespace DankSmiteOnline2
             AssignBorder(8, StarterItemFrame);
             
             
-            ItemPicture1.ImageUrl = NamingFormatter(Build[0].name);
-            ItemPicture2.ImageUrl = NamingFormatter(Build[1].name);
-            ItemPicture3.ImageUrl = NamingFormatter(Build[2].name);
-            ItemPicture4.ImageUrl = NamingFormatter(Build[3].name);
-            ItemPicture5.ImageUrl = NamingFormatter(Build[4].name);
-            ItemPicture6.ImageUrl = NamingFormatter(Build[5].name);
+            ItemPicture1.ImageUrl = Build[0].fileName;
+            ItemPicture2.ImageUrl = Build[1].fileName;
+            ItemPicture3.ImageUrl = Build[2].fileName;
+            ItemPicture4.ImageUrl = Build[3].fileName;
+            ItemPicture5.ImageUrl = Build[4].fileName;
+            ItemPicture6.ImageUrl = Build[5].fileName;
 
-            RelicPicture1.ImageUrl = NamingFormatter(Build[6].name);
-            RelicPicture2.ImageUrl = NamingFormatter(Build[7].name);
+            RelicPicture1.ImageUrl = Build[6].fileName;
+            RelicPicture2.ImageUrl = Build[7].fileName;
 
-            StarterItemPicture.ImageUrl = NamingFormatter(Build[8].name);
+            StarterItemPicture.ImageUrl = Build[8].fileName;
         }
-
-        public string NamingFormatter(string txt)
-        {
-            txt = txt.Replace("_", "-");
-            txt = txt.Replace("\'", "").ToLower();
-            txt = "Resources/" + txt + ".png";
-            return txt;
-        }
-        
 
         public void DrawGodPictureBox(System.Web.UI.WebControls.Image picture)
         {
-            picture.ImageUrl = NamingFormatter(_god.name);
+            picture.ImageUrl = _god.fileName;
 
 
             this.GodLabel.Text = _god.name.Replace("_", " ");
         }
 
-        public void pictureBox1_Hover(object sender, EventArgs e)
+        public void PictureBox1_Hover(object sender, EventArgs e)
         {
             this.CurrentItemNameLabel.Text = Build[0].name.Replace('_', ' ');
         }
 
-        public void pictureBox1_Hover()
+        public void PictureBox1_Hover()
         {
             this.CurrentItemNameLabel.Text = Build[0].name.Replace('_', ' ');
         }
@@ -839,92 +822,98 @@ namespace DankSmiteOnline2
 
         #region BodySection
         //Checkboxes with gods and itemcolours, sets _build to a full build, and _god to a god
-        public void fullRebuild(bool g, bool m, bool h, bool a, bool w, bool dmg, bool hyb, bool def)
+        public void FullRebuild(List<ItemColorType> itemColorTypes, List<GodType> godTypes)
         {
             //Choose god
             int choice;
-            legalGods = godCol.retrieveLegalList(g, m, h, a, w);
+            legalGods = godCol.RetrieveLegalList(godTypes);
 
             choice = rnd.Next(legalGods.Count);
-            God = legalGods[choice];
+            god = legalGods[choice];
 
-            legalBoots = itemCol.retrieveLegalBoots(dmg, hyb, def, God.type);
-            legalItems = itemCol.retrieveLegalItems(dmg, hyb, def, God.type);
-            legalRelics = itemCol.retrieveLegalRelics(dmg, hyb, def, God.type);
-            legalStarters = itemCol.retrieveLegalStarters(dmg, hyb, def, God.type);
+            legalBoots = itemCol.RetrieveLegalBoots(itemColorTypes, god.godType);
+            legalItems = itemCol.RetrieveLegalItems(itemColorTypes, god.godType);
+            legalRelics = itemCol.RetrieveLegalRelics();
+            legalStarters = itemCol.RetrieveLegalStarters(itemColorTypes, god.godType);
 
             for (int i = 0; i < 9; i++)
             {
-                rerollItem(i);
+                RerollItem(i);
             }
-
         }
 
-        public void fullRebuild(string potGod, bool dmg, bool hyb, bool def)
+        public void FullRebuild(string potGod, List<ItemColorType> itemColorTypes)
         {
             bool foundGod = false;
-            List<string> ls = new List<string>();
-            foreach (God gd in godCol.retrieveLegalList(true, true, true, true, true))
+            foreach (God currentGod in godCol.RetrieveLegalList())
             {
-                if (gd.name.ToLower().Equals(InputField.Text.ToLower().Replace(" ", "_")))
+                if (currentGod.name.Equals(InputField.Text.Replace(" ", "_"), StringComparison.CurrentCultureIgnoreCase))
                 {
                     foundGod = true;
-                    _god = gd;
-                    if (_god.type.Equals("g"))
-                    {
-                        legalGods = godCol.retrieveLegalList(true, false, false, false, false);
-                    }
-                    else if (_god.type.Equals("m"))
-                    {
-                        legalGods = godCol.retrieveLegalList(false, true, false, false, false);
-                    }
-                    else if (_god.type.Equals("h"))
-                    {
-                        legalGods = godCol.retrieveLegalList(false, false, true, false, false);
-                    }
-                    else if (_god.type.Equals("a"))
-                    {
-                        legalGods = godCol.retrieveLegalList(false, false, false, true, false);
-                    }
-                    else if (_god.type.Equals("w"))
-                    {
-                        legalGods = godCol.retrieveLegalList(false, false, false, false, true);
-                    }
+                    _god = currentGod;
 
-                    legalBoots = itemCol.retrieveLegalBoots(dmg, hyb, def, God.type);
-                    legalItems = itemCol.retrieveLegalItems(dmg, hyb, def, God.type);
-                    legalRelics = itemCol.retrieveLegalRelics(dmg, hyb, def, God.type);
-                    legalStarters = itemCol.retrieveLegalStarters(dmg, hyb, def, God.type);
+                    legalGods = godCol.RetrieveLegalList(new List<GodType> { _god.godType });
+                    
+                    legalBoots = itemCol.RetrieveLegalBoots(itemColorTypes, god.godType);
+                    legalItems = itemCol.RetrieveLegalItems(itemColorTypes, god.godType);
+                    legalRelics = itemCol.RetrieveLegalRelics();
+                    legalStarters = itemCol.RetrieveLegalStarters(itemColorTypes, god.godType);
 
                     for (int i = 0; i < 9; i++)
                     {
-                        rerollItem(i);
+                        RerollItem(i);
                     }
                 }
 
                 if (!foundGod)
                 {
-                    fullRebuild(
-                        this.GuardianCheckbox.Checked,
-                        this.MageCheckbox.Checked,
-                        this.HunterCheckbox.Checked,
-                        this.AssassinCheckbox.Checked,
-                        this.WarriorCheckbox.Checked,
-                        this.DamageCheckbox.Checked,
-                        this.HybridCheckbox.Checked,
-                        this.DefenseCheckbox.Checked
-                    );
+                    FullRebuild(CreateItemTypeListFromCheckBoxes(), CreateGodTypeListFromCheckBoxes());
                 }
             }
         }
 
+        private List<GodType> CreateGodTypeListFromCheckBoxes()
+        {
+            List<GodType> godTypes = new List<GodType>();
+            if (this.GuardianCheckbox.Checked)
+                godTypes.Add(GodType.Guardian);
+
+            if (this.MageCheckbox.Checked)
+                godTypes.Add(GodType.Mage);
+
+            if (this.AssassinCheckbox.Checked)
+                godTypes.Add(GodType.Assassin);
+
+            if (this.HunterCheckbox.Checked)
+                godTypes.Add(GodType.Hunter);
+
+            if (this.WarriorCheckbox.Checked)
+                godTypes.Add(GodType.Warrior);
+
+            return godTypes;
+        }
+
+        private List<ItemColorType> CreateItemTypeListFromCheckBoxes()
+        {
+            List<ItemColorType> itemColorTypes = new List<ItemColorType>();
+            if (this.DamageCheckbox.Checked)
+                itemColorTypes.Add(ItemColorType.Damage);
+
+            if (this.HybridCheckbox.Checked)
+                itemColorTypes.Add(ItemColorType.Hybrid);
+
+            if (this.DefenseCheckbox.Checked)
+                itemColorTypes.Add(ItemColorType.Defense);
+
+            return itemColorTypes;
+        }
 
         ////Takes an int itemNumber:
         ////0: Boots
         ////1-5: Items
         ////6-7: Relics
         ////8: Starter
-        public void rerollItem(int itemNumber)
+        public void RerollItem(int itemNumber)
         {
             int choice;
             Item itemCandidate;
@@ -936,7 +925,7 @@ namespace DankSmiteOnline2
                 {
                     choice = rnd.Next(legalBoots.Count);
                     itemCandidate = legalBoots[choice];
-                } while (itemInBuild(itemCandidate));
+                } while (ItemInBuild(itemCandidate));
             }
 
             //Normal items
@@ -946,7 +935,7 @@ namespace DankSmiteOnline2
                 {
                     choice = rnd.Next(legalItems.Count);
                     itemCandidate = legalItems[choice];
-                } while (itemInBuild(itemCandidate) || (itemCandidate.isKatana && God.type.Equals("h")));
+                } while (ItemInBuild(itemCandidate) || (!itemCandidate.godItemType.Contains(god.godType)));
             }
 
             //Relics
@@ -956,7 +945,7 @@ namespace DankSmiteOnline2
                 {
                     choice = rnd.Next(legalRelics.Count);
                     itemCandidate = legalRelics[choice];
-                } while (itemInBuild(itemCandidate));
+                } while (ItemInBuild(itemCandidate));
             }
 
             //Fallback on starter item
@@ -966,69 +955,27 @@ namespace DankSmiteOnline2
                 {
                     choice = rnd.Next(legalStarters.Count);
                     itemCandidate = legalStarters[choice];
-                } while (itemInBuild(itemCandidate));
+                } while (ItemInBuild(itemCandidate));
             }
 
             Build[itemNumber] = itemCandidate;
         }
 
-        //Rerolls the god, taking into account whether or not Katanas are in the tree.
-        public void rerollGod()
+        //Rerolls the god, taking current items into account.
+        public void RerollGod()
         {
-            bool isMag = false;
-            if (God.type.Equals("g") || God.type.Equals("m"))
-            {
-                isMag = true;
-            }
-
-            bool hasKatana = buildContainsKatana();
             int choice;
             God godCandidate;
-
-            if (isMag)
+            do
             {
-                do
-                {
-                    choice = rnd.Next(legalGods.Count);
-                    godCandidate = legalGods[choice];
-                } while (
-                            !godCandidate.type.Equals("m")
-                            && !godCandidate.type.Equals("g")
-                            || godCandidate.name.Equals(God.name));
+                choice = rnd.Next(legalGods.Count);
+                godCandidate = legalGods[choice];
             }
-            else
-            {
-                if (hasKatana)
-                {
-                    do
-                    {
-                        choice = rnd.Next(legalGods.Count);
-                        godCandidate = legalGods[choice];
-                    } while (
-                               !godCandidate.type.Equals("a")
-                                && !godCandidate.type.Equals("w")
-                            || godCandidate.name.Equals(God.name)
-                                );
-                }
-                else
-                {
-                    do
-                    {
-                        choice = rnd.Next(legalGods.Count);
-                        godCandidate = legalGods[choice];
-                    } while (
-                               (!godCandidate.type.Equals("h")
-                                && !godCandidate.type.Equals("a")
-                                && !godCandidate.type.Equals("w"))
-                            || godCandidate.name.Equals(God.name)
-                                );
-                }
-            }
-            God = godCandidate;
+            while (!Build.All(x => x.godItemType.Contains(godCandidate.godType)));
+            god = godCandidate;
         }
 
-
-        public bool itemInBuild(Item item)
+        public bool ItemInBuild(Item item)
         {
 
             foreach (Item builditem in Build)
@@ -1042,20 +989,7 @@ namespace DankSmiteOnline2
             return false;
 
         }
-
-        public bool buildContainsKatana()
-        {
-            foreach (Item item in Build)
-            {
-                if (item.isKatana)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-
+        
         #endregion
 
         //private void Settings_SelectedIndexChanged(object sender, EventArgs e)

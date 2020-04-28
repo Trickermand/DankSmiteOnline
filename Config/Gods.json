@@ -1,0 +1,509 @@
+{
+  "Gods": [
+    {
+      "Name": "Achilles",
+      "FileName": "Resources\\Gods\\achilles.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Agni",
+      "FileName": "Resources\\Gods\\agni.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Ah Muzen Cab",
+      "FileName": "Resources\\Gods\\ah-muzen-cab.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Ah Puch",
+      "FileName": "Resources\\Gods\\ah-puch.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Amaterasu",
+      "FileName": "Resources\\Gods\\amaterasu.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Anhur",
+      "FileName": "Resources\\Gods\\anhur.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Anubis",
+      "FileName": "Resources\\Gods\\anubis.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Ao Kuang",
+      "FileName": "Resources\\Gods\\ao-kuang.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Aphrodite",
+      "FileName": "Resources\\Gods\\aphrodite.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Apollo",
+      "FileName": "Resources\\Gods\\apollo.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Arachne",
+      "FileName": "Resources\\Gods\\arachne.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Ares",
+      "FileName": "Resources\\Gods\\ares.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Artemis",
+      "FileName": "Resources\\Gods\\artemis.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Artio",
+      "FileName": "Resources\\Gods\\artio.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Athena",
+      "FileName": "Resources\\Gods\\athena.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Awilix",
+      "FileName": "Resources\\Gods\\awilix.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Bacchus",
+      "FileName": "Resources\\Gods\\bacchus.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Bakasura",
+      "FileName": "Resources\\Gods\\bakasura.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Baron Samedi",
+      "FileName": "Resources\\Gods\\baron-samedi.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Bastet",
+      "FileName": "Resources\\Gods\\bastet.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Bellona",
+      "FileName": "Resources\\Gods\\bellona.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Cabrakan",
+      "FileName": "Resources\\Gods\\cabrakan.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Camazotz",
+      "FileName": "Resources\\Gods\\camazotz.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Cerberus",
+      "FileName": "Resources\\Gods\\cerberus.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Cernunnos",
+      "FileName": "Resources\\Gods\\cernunnos.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Chaac",
+      "FileName": "Resources\\Gods\\chaac.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Chang'e",
+      "FileName": "Resources\\Gods\\change.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Chernobog",
+      "FileName": "Resources\\Gods\\chernobog.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Chiron",
+      "FileName": "Resources\\Gods\\chiron.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Chronos",
+      "FileName": "Resources\\Gods\\chronos.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Cu Chulainn",
+      "FileName": "Resources\\Gods\\cu-chulainn.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Cupid",
+      "FileName": "Resources\\Gods\\cupid.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Da Ji",
+      "FileName": "Resources\\Gods\\da-ji.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Discordia",
+      "FileName": "Resources\\Gods\\discordia.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Erlang Shen",
+      "FileName": "Resources\\Gods\\erlang-shen.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Fafnir",
+      "FileName": "Resources\\Gods\\fafnir.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Fenrir",
+      "FileName": "Resources\\Gods\\fenrir.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Freya",
+      "FileName": "Resources\\Gods\\freya.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Ganesha",
+      "FileName": "Resources\\Gods\\ganesha.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Geb",
+      "FileName": "Resources\\Gods\\geb.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Guan Yu",
+      "FileName": "Resources\\Gods\\guan-yu.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Hachiman",
+      "FileName": "Resources\\Gods\\hachiman.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Hades",
+      "FileName": "Resources\\Gods\\hades.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "He Bo",
+      "FileName": "Resources\\Gods\\he-bo.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Hel",
+      "FileName": "Resources\\Gods\\hel.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Hera",
+      "FileName": "Resources\\Gods\\hera.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Hercules",
+      "FileName": "Resources\\Gods\\hercules.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Hou Yi",
+      "FileName": "Resources\\Gods\\hou-yi.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Hun Batz",
+      "FileName": "Resources\\Gods\\hun-batz.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Isis",
+      "FileName": "Resources\\Gods\\isis.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Izanami",
+      "FileName": "Resources\\Gods\\izanami.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Janus",
+      "FileName": "Resources\\Gods\\janus.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Jing Wei",
+      "FileName": "Resources\\Gods\\jing-wei.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Jormungandr",
+      "FileName": "Resources\\Gods\\jormungandr.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Kali",
+      "FileName": "Resources\\Gods\\kali.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Khepri",
+      "FileName": "Resources\\Gods\\khepri.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "King Arthur",
+      "FileName": "Resources\\Gods\\king-arthur.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Kukulkan",
+      "FileName": "Resources\\Gods\\kukulkan.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Kumbhakarna",
+      "FileName": "Resources\\Gods\\kumbhakarna.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Kuzenbo",
+      "FileName": "Resources\\Gods\\kuzenbo.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Loki",
+      "FileName": "Resources\\Gods\\loki.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Medusa",
+      "FileName": "Resources\\Gods\\medusa.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Mercury",
+      "FileName": "Resources\\Gods\\mercury.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Merlin",
+      "FileName": "Resources\\Gods\\merlin.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Ne Zha",
+      "FileName": "Resources\\Gods\\ne-zha.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Neith",
+      "FileName": "Resources\\Gods\\neith.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Nemesis",
+      "FileName": "Resources\\Gods\\nemesis.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Nike",
+      "FileName": "Resources\\Gods\\nike.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Nox",
+      "FileName": "Resources\\Gods\\nox.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Nu Wa",
+      "FileName": "Resources\\Gods\\nu-wa.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Odin",
+      "FileName": "Resources\\Gods\\odin.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Osiris",
+      "FileName": "Resources\\Gods\\osiris.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Pele",
+      "FileName": "Resources\\Gods\\pele.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Poseidon",
+      "FileName": "Resources\\Gods\\poseidon.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Ra",
+      "FileName": "Resources\\Gods\\ra.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Raijin",
+      "FileName": "Resources\\Gods\\raijin.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Rama",
+      "FileName": "Resources\\Gods\\rama.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Ratatoskr",
+      "FileName": "Resources\\Gods\\ratatoskr.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Ravana",
+      "FileName": "Resources\\Gods\\ravana.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Scylla",
+      "FileName": "Resources\\Gods\\scylla.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Serqet",
+      "FileName": "Resources\\Gods\\serqet.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Skadi",
+      "FileName": "Resources\\Gods\\skadi.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Sobek",
+      "FileName": "Resources\\Gods\\sobek.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Sol",
+      "FileName": "Resources\\Gods\\sol.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Sun Wukong",
+      "FileName": "Resources\\Gods\\sun-wukong.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Susano",
+      "FileName": "Resources\\Gods\\susano.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Sylvanus",
+      "FileName": "Resources\\Gods\\sylvanus.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Terra",
+      "FileName": "Resources\\Gods\\terra.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Thanatos",
+      "FileName": "Resources\\Gods\\thanatos.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "The Morrigan",
+      "FileName": "Resources\\Gods\\the-morrigan.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Thor",
+      "FileName": "Resources\\Gods\\thor.png",
+      "Type": "Assassin"
+    },
+    {
+      "Name": "Thoth",
+      "FileName": "Resources\\Gods\\thoth.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Tyr",
+      "FileName": "Resources\\Gods\\tyr.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Ullr",
+      "FileName": "Resources\\Gods\\ullr.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Vamana",
+      "FileName": "Resources\\Gods\\vamana.png",
+      "Type": "Warrior"
+    },
+    {
+      "Name": "Vulcan",
+      "FileName": "Resources\\Gods\\vulcan.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Xbalanque",
+      "FileName": "Resources\\Gods\\xbalanque.png",
+      "Type": "Hunter"
+    },
+    {
+      "Name": "Xing Tian",
+      "FileName": "Resources\\Gods\\xing-tian.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Ymir",
+      "FileName": "Resources\\Gods\\ymir.png",
+      "Type": "Guardian"
+    },
+    {
+      "Name": "Zeus",
+      "FileName": "Resources\\Gods\\zeus.png",
+      "Type": "Mage"
+    },
+    {
+      "Name": "Zhong Kui",
+      "FileName": "Resources\\Gods\\zhong-kui.png",
+      "Type": "Mage"
+    }
+  ]
+}

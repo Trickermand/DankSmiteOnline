@@ -57,10 +57,10 @@
     <ApplicationIcon>icon300_5.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>239940C56131170A150D08164000A9F20D9287EA</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>499F12858F1DC4C7C4F054915CE69CEAC71739C7</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>DankSmite_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>DankSmite_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -104,6 +104,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="DankSmite_1_TemporaryKey.pfx" />
     <None Include="DankSmite_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

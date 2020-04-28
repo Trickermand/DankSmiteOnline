@@ -14,10 +14,30 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <script lang="JavaScript">
+<%--    <script lang="JavaScript">
+        $(function () {
+            $("Home Page").click(function (e) {
+
+              var offset = $(this).offset();
+              var relativeX = (e.pageX - offset.left);
+              var relativeY = (e.pageY - offset.top);
+
+              alert("X: " + relativeX + "  Y: " + relativeY);
+
+            });
+        });
+
+        var doc = document.getElementById("Home Page");
+        doc.onclick = UpdateTitle();
+        document.onclick = UpdateTitle(1);
+
         document.onmousemove = getCoordinate;
         var mosX = 0 ;
-        var mosY = 0 ;
+        var mosY = 0;
+        function UpdateTitle() {
+            var currentDate = new Date();
+            document.title = currentDate.getSeconds();
+        }
         function getCoordinate(e)
         {
         mosX = event.clientX + document.body.scrollLeft ;
@@ -43,7 +63,7 @@
 
         return true
         }
-    </script>
+    </script>--%>
     
 </head>
 <body>
@@ -54,6 +74,8 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+            <!--Move down plz-->
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             <hr />
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - <%: Page.Title %> </p>

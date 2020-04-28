@@ -1,0 +1,102 @@
+{
+  "Relics": [
+    {
+      "Name": "Heavenly Wings",
+      "FileName": "Resources\\Items\\heavenly-wings.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Cursed Ankh",
+      "FileName": "Resources\\Items\\cursed-ankh.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Aegis Amulet",
+      "FileName": "Resources\\Items\\aegis-amulet.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Blink Rune",
+      "FileName": "Resources\\Items\\blink-rune.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Purification Beads",
+      "FileName": "Resources\\Items\\purification-beads.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Teleport Glyph",
+      "FileName": "Resources\\Items\\teleport-glyph.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Meditation Cloak",
+      "FileName": "Resources\\Items\\meditation-cloak.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Magic Shell",
+      "FileName": "Resources\\Items\\magic-shell.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Shield of Thorns",
+      "FileName": "Resources\\Items\\shield-of-thorns.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Sundering Spear",
+      "FileName": "Resources\\Items\\sundering-spear.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Phantom Veil",
+      "FileName": "Resources\\Items\\phantom-veil.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Bracer of Undoing",
+      "FileName": "Resources\\Items\\bracer-of-undoing.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Horrific Emblem",
+      "FileName": "Resources\\Items\\horrific-emblem.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Belt of Frenzy",
+      "FileName": "Resources\\Items\\belt-of-frenzy.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "StarterItems": [
+    {
+      "Name": "Warrior's Blessing",
+      "FileName": "Resources\\Items\\warriors-blessing.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Assassin's Blessing",
+      "FileName": "Resources\\Items\\assassins-blessing.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "Conquest;Siege;Joust;Arena;Clash"
+    },
+    {
+      "Name": "Hunter's Blessing",
+      "FileName": "Resources\\Items\\hunters-blessing.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Mage's Blessing",
+      "FileName": "Resources\\Items\\mages-blessing.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Guardian's Blessing",
+      "FileName": "Resources\\Items\\guardians-blessing.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Attacker's Blessing",
+      "FileName": "Resources\\Items\\attackers-blessing.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "Siege;Joust;Arena;Assault;Clash"
+    },
+    {
+      "Name": "Defender's Blessing",
+      "FileName": "Resources\\Items\\defenders-blessing.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "Siege;Joust;Arena;Assault;Clash"
+    },
+    {
+      "Name": "Specialist's Blessing",
+      "FileName": "Resources\\Items\\specialists-blessing.png",
+      "AllowedGodTypes": "All",
+      "Color": "NoColor",
+      "AllowedMaps": "Siege;Joust;Arena;Assault;Clash"
+    }
+  ]
+}

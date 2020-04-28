@@ -1,0 +1,662 @@
+{
+  "Items": [
+    {
+      "Name": "Gladiator's Shield",
+      "FileName": "Resources\\Items\\gladiators-shield.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Berserker's Shield",
+      "FileName": "Resources\\Items\\berserkers-shield.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Shifter's Shield",
+      "FileName": "Resources\\Items\\shifters-shield.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Void Shield",
+      "FileName": "Resources\\Items\\void-shield.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Ichaival",
+      "FileName": "Resources\\Items\\ichaival.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Silverbranch Bow",
+      "FileName": "Resources\\Items\\silverbranch-bow.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Odysseus' Bow",
+      "FileName": "Resources\\Items\\odysseus-bow.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Atalanta's Bow",
+      "FileName": "Resources\\Items\\atalantas-bow.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Asi",
+      "FileName": "Resources\\Items\\asi.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Qin's Sais",
+      "FileName": "Resources\\Items\\qins-sais.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "The Executioner",
+      "FileName": "Resources\\Items\\the-executioner.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Ancile",
+      "FileName": "Resources\\Items\\ancile.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Runic Shield",
+      "FileName": "Resources\\Items\\runic-shield.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Runeforged Hammer",
+      "FileName": "Resources\\Items\\runeforged-hammer.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Blackthorn Hammer",
+      "FileName": "Resources\\Items\\blackthorn-hammer.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Frostbound Hammer",
+      "FileName": "Resources\\Items\\frostbound-hammer.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Soul Eater",
+      "FileName": "Resources\\Items\\soul-eater.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Devourer's Gauntlet",
+      "FileName": "Resources\\Items\\devourers-gauntlet.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "Conquest;Siege;Joust;Arena;Clash"
+    },
+    {
+      "Name": "Bloodforge",
+      "FileName": "Resources\\Items\\bloodforge.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Hydra's Lament",
+      "FileName": "Resources\\Items\\hydras-lament.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Transcendence",
+      "FileName": "Resources\\Items\\transcendence.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "Conquest;Siege;Joust;Arena;Clash"
+    },
+    {
+      "Name": "Heartseeker",
+      "FileName": "Resources\\Items\\heartseeker.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Brawler's Beat Stick",
+      "FileName": "Resources\\Items\\brawlers-beat-stick.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "The Crusher",
+      "FileName": "Resources\\Items\\the-crusher.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Titan's Bane",
+      "FileName": "Resources\\Items\\titans-bane.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Jotunn's Wrath",
+      "FileName": "Resources\\Items\\jotunns-wrath.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Poisoned Star",
+      "FileName": "Resources\\Items\\poisoned-star.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Wind Demon",
+      "FileName": "Resources\\Items\\wind-demon.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Rage",
+      "FileName": "Resources\\Items\\rage.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Malice",
+      "FileName": "Resources\\Items\\malice.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Deathbringer",
+      "FileName": "Resources\\Items\\deathbringer.png",
+      "AllowedGodTypes": "Physical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Masamune",
+      "FileName": "Resources\\Items\\masamune.png",
+      "AllowedGodTypes": "Warrior;Assassin",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Stone Cutting Sword",
+      "FileName": "Resources\\Items\\stone-cutting-sword.png",
+      "AllowedGodTypes": "Warrior;Assassin",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Hastened Katana",
+      "FileName": "Resources\\Items\\hastened-katana.png",
+      "AllowedGodTypes": "Warrior;Assassin",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Golden Blade",
+      "FileName": "Resources\\Items\\golden-blade.png",
+      "AllowedGodTypes": "Warrior;Assassin",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Relic Dagger",
+      "FileName": "Resources\\Items\\relic-dagger.png",
+      "AllowedGodTypes": "All",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Winged Blade",
+      "FileName": "Resources\\Items\\winged-blade.png",
+      "AllowedGodTypes": "All",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Witchblade",
+      "FileName": "Resources\\Items\\witchblade.png",
+      "AllowedGodTypes": "All",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Toxic Blade",
+      "FileName": "Resources\\Items\\toxic-blade.png",
+      "AllowedGodTypes": "All",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Oni Hunter's Garb",
+      "FileName": "Resources\\Items\\oni-hunters-garb.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Genji's Guard",
+      "FileName": "Resources\\Items\\genjis-guard.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Shogun's Kusari",
+      "FileName": "Resources\\Items\\shoguns-kusari.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Emperor's Armor",
+      "FileName": "Resources\\Items\\emperors-armor.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Sovereignty",
+      "FileName": "Resources\\Items\\sovereignty.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Midgardian Mail",
+      "FileName": "Resources\\Items\\midgardian-mail.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Mystical Mail",
+      "FileName": "Resources\\Items\\mystical-mail.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Stone of Gaia",
+      "FileName": "Resources\\Items\\stone-of-gaia.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Shield of Regrowth",
+      "FileName": "Resources\\Items\\shield-of-regrowth.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Gauntlet of Thebes",
+      "FileName": "Resources\\Items\\gauntlet-of-thebes.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Mail of Renewal",
+      "FileName": "Resources\\Items\\mail-of-renewal.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Magi's Cloak",
+      "FileName": "Resources\\Items\\magis-cloak.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Hide of the Urchin",
+      "FileName": "Resources\\Items\\hide-of-the-urchin.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Spirit Robe",
+      "FileName": "Resources\\Items\\spirit-robe.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Mantle of Discord",
+      "FileName": "Resources\\Items\\mantle-of-discord.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Heartward Amulet",
+      "FileName": "Resources\\Items\\heartward-amulet.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Pestilence",
+      "FileName": "Resources\\Items\\pestilence.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Bulwark of Hope",
+      "FileName": "Resources\\Items\\bulwark-of-hope.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Talisman of Energy",
+      "FileName": "Resources\\Items\\talisman-of-energy.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Spectral Armor",
+      "FileName": "Resources\\Items\\spectral-armor.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Hide of the Nemean Lion",
+      "FileName": "Resources\\Items\\hide-of-the-nemean-lion.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Breastplate of Valor",
+      "FileName": "Resources\\Items\\breastplate-of-valor.png",
+      "AllowedGodTypes": "All",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Dynasty Plate Helm",
+      "FileName": "Resources\\Items\\dynasty-plate-helm.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Celestial Legion Helm",
+      "FileName": "Resources\\Items\\celestial-legion-helm.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Lotus Crown",
+      "FileName": "Resources\\Items\\lotus-crown.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Jade Emperor's Crown",
+      "FileName": "Resources\\Items\\jade-emperors-crown.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Stone of Binding",
+      "FileName": "Resources\\Items\\stone-of-binding.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Void Stone",
+      "FileName": "Resources\\Items\\void-stone.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Stone of Fal",
+      "FileName": "Resources\\Items\\stone-of-fal.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Doom Orb",
+      "FileName": "Resources\\Items\\doom-orb.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Chronos' Pendant",
+      "FileName": "Resources\\Items\\chronos-pendant.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Rod of Tahuti",
+      "FileName": "Resources\\Items\\rod-of-tahuti.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Spear Of The Magus",
+      "FileName": "Resources\\Items\\spear-of-the-magus.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Obsidian Shard",
+      "FileName": "Resources\\Items\\obsidian-shard.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Divine Ruin",
+      "FileName": "Resources\\Items\\divine-ruin.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Spear of Desolation",
+      "FileName": "Resources\\Items\\spear-of-desolation.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Bancroft's Talon",
+      "FileName": "Resources\\Items\\bancrofts-talon.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Pythagorem's Piece",
+      "FileName": "Resources\\Items\\pythagorems-piece.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Typhon's Fang",
+      "FileName": "Resources\\Items\\typhons-fang.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Soul Gem",
+      "FileName": "Resources\\Items\\soul-gem.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Demonic Grip",
+      "FileName": "Resources\\Items\\demonic-grip.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Shaman's Ring",
+      "FileName": "Resources\\Items\\shamans-ring.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Telkhines Ring",
+      "FileName": "Resources\\Items\\telkhines-ring.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Hastened Ring",
+      "FileName": "Resources\\Items\\hastened-ring.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Rod of Asclepius",
+      "FileName": "Resources\\Items\\rod-of-asclepius.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Warlock's Staff",
+      "FileName": "Resources\\Items\\warlocks-staff.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "Conquest;Siege;Joust;Arena;Clash"
+    },
+    {
+      "Name": "Ethereal Staff",
+      "FileName": "Resources\\Items\\ethereal-staff.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Gem of Isolation",
+      "FileName": "Resources\\Items\\gem-of-isolation.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Book of Thoth",
+      "FileName": "Resources\\Items\\book-of-thoth.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "Conquest;Siege;Joust;Arena;Clash"
+    },
+    {
+      "Name": "Polynomicon",
+      "FileName": "Resources\\Items\\polynomicon.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Book of the Dead",
+      "FileName": "Resources\\Items\\book-of-the-dead.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Soul Reaver",
+      "FileName": "Resources\\Items\\soul-reaver.png",
+      "AllowedGodTypes": "Magical",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Rangda's Mask",
+      "FileName": "Resources\\Items\\rangdas-mask.png",
+      "AllowedGodTypes": "Warrior;Guardian",
+      "Color": "Damage",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Bumba's Mask",
+      "FileName": "Resources\\Items\\bumbas-mask.png",
+      "AllowedGodTypes": "All",
+      "Color": "Hybrid",
+      "AllowedMaps": "All"
+    },
+    {
+      "Name": "Lono's Mask",
+      "FileName": "Resources\\Items\\lonos-mask.png",
+      "AllowedGodTypes": "Mage;Hunter;Assassin",
+      "Color": "Defense",
+      "AllowedMaps": "All"
+    }
+  ]
+}

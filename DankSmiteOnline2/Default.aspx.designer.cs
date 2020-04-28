@@ -40,6 +40,15 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.TextBox InputField;
         
         /// <summary>
+        /// MapSelectionList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList MapSelectionList;
+        
+        /// <summary>
         /// UpdatePanel3 control.
         /// </summary>
         /// <remarks>
@@ -139,177 +148,6 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.Label CurrentItemNameLabel;
         
         /// <summary>
-        /// ItemLabel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel1;
-        
-        /// <summary>
-        /// ItemPicture1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ItemPicture1;
-        
-        /// <summary>
-        /// ItemFrame1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ItemFrame1;
-        
-        /// <summary>
-        /// ItemLabel2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel2;
-        
-        /// <summary>
-        /// ItemPicture2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ItemPicture2;
-        
-        /// <summary>
-        /// ItemFrame2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ItemFrame2;
-        
-        /// <summary>
-        /// ItemLabel3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel3;
-        
-        /// <summary>
-        /// ItemPicture3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ItemPicture3;
-        
-        /// <summary>
-        /// ItemFrame3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ItemFrame3;
-        
-        /// <summary>
-        /// ItemLabel4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel4;
-        
-        /// <summary>
-        /// ItemPicture4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ItemPicture4;
-        
-        /// <summary>
-        /// ItemFrame4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ItemFrame4;
-        
-        /// <summary>
-        /// ItemLabel5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel5;
-        
-        /// <summary>
-        /// ItemPicture5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ItemPicture5;
-        
-        /// <summary>
-        /// ItemFrame5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ItemFrame5;
-        
-        /// <summary>
-        /// ItemLabel6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ItemLabel6;
-        
-        /// <summary>
-        /// ItemPicture6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ItemPicture6;
-        
-        /// <summary>
-        /// ItemFrame6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ItemFrame6;
-        
-        /// <summary>
-        /// RelicLabel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RelicLabel1;
-        
-        /// <summary>
         /// RelicPicture1 control.
         /// </summary>
         /// <remarks>
@@ -326,15 +164,6 @@ namespace DankSmiteOnline2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton RelicFrame1;
-        
-        /// <summary>
-        /// RelicLabel2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RelicLabel2;
         
         /// <summary>
         /// RelicPicture2 control.
@@ -355,15 +184,6 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.ImageButton RelicFrame2;
         
         /// <summary>
-        /// StarterItemLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label StarterItemLabel;
-        
-        /// <summary>
         /// StarterItemPicture control.
         /// </summary>
         /// <remarks>
@@ -380,6 +200,114 @@ namespace DankSmiteOnline2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton StarterItemFrame;
+        
+        /// <summary>
+        /// ItemPicture1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ItemPicture1;
+        
+        /// <summary>
+        /// ItemFrame1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ItemFrame1;
+        
+        /// <summary>
+        /// ItemPicture2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ItemPicture2;
+        
+        /// <summary>
+        /// ItemFrame2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ItemFrame2;
+        
+        /// <summary>
+        /// ItemPicture3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ItemPicture3;
+        
+        /// <summary>
+        /// ItemFrame3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ItemFrame3;
+        
+        /// <summary>
+        /// ItemPicture4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ItemPicture4;
+        
+        /// <summary>
+        /// ItemFrame4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ItemFrame4;
+        
+        /// <summary>
+        /// ItemPicture5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ItemPicture5;
+        
+        /// <summary>
+        /// ItemFrame5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ItemFrame5;
+        
+        /// <summary>
+        /// ItemPicture6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ItemPicture6;
+        
+        /// <summary>
+        /// ItemFrame6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ItemFrame6;
         
         /// <summary>
         /// GodUpdatePanel control.
@@ -436,6 +364,24 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.Label GeneralTextBox;
         
         /// <summary>
+        /// RerollUpdatePanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel RerollUpdatePanel;
+        
+        /// <summary>
+        /// RerollNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label RerollNumber;
+        
+        /// <summary>
         /// ButtonPanel control.
         /// </summary>
         /// <remarks>
@@ -454,39 +400,21 @@ namespace DankSmiteOnline2 {
         protected global::System.Web.UI.WebControls.Button CreditsButton;
         
         /// <summary>
-        /// WelcomeButton control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button WelcomeButton;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// RerollUpdatePanel control.
+        /// DisclaimerButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel RerollUpdatePanel;
-        
-        /// <summary>
-        /// RerollLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RerollLabel;
-        
-        /// <summary>
-        /// RerollNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RerollNumber;
+        protected global::System.Web.UI.WebControls.Button DisclaimerButton;
     }
 }

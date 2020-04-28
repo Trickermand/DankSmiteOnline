@@ -11,7 +11,7 @@ namespace DankSmite
 {
     public partial class Form1 : Form
     {
-        public List<string> AllActualGods = godCol.retrieveAllGodNames();
+        public List<string> AllActualGods = godCol.RetrieveAllGodNames();
 
         public Form1()
         {
@@ -237,10 +237,10 @@ namespace DankSmite
                 Build[7] = new Item("Blink_Rune", "dmg", true, true, false);
                 Build[8] = new Item("Deathbringer", "dmg", false, true, false);
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, God.type);
-                legalItems = itemCol.retrieveLegalItems(true, true, true, God.type);
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, God.type);
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, God.type);
+                legalBoots = itemCol.RetrieveLegalBoots(true, true, true, God.godType);
+                legalItems = itemCol.RetrieveLegalItems(true, true, true, God.godType);
+                legalRelics = itemCol.RetrieveLegalRelics(true, true, true, God.godType);
+                legalStarters = itemCol.RetrieveLegalStarters(true, true, true, God.godType);
             }
             else if (this.TextInput.Text.ToLower() == "trickermand")
             {
@@ -257,10 +257,10 @@ namespace DankSmite
                 Build[7] = new Item("Magic_Shell", "dmg", true, true, false);
                 Build[8] = new Item("Mark_of_the_Vanguard", "dmg", false, true, false);
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, God.type);
-                legalItems = itemCol.retrieveLegalItems(true, true, true, God.type);
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, God.type);
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, God.type);
+                legalBoots = itemCol.RetrieveLegalBoots(true, true, true, God.godType);
+                legalItems = itemCol.RetrieveLegalItems(true, true, true, God.godType);
+                legalRelics = itemCol.RetrieveLegalRelics(true, true, true, God.godType);
+                legalStarters = itemCol.RetrieveLegalStarters(true, true, true, God.godType);
             }
             else if (this.TextInput.Text.ToLower() == "nazzyc")
             {
@@ -273,10 +273,10 @@ namespace DankSmite
                 Build[7] = new Item("Bracer_of_Undoing", "def", true, true, false);
                 Build[8] = new Item("Odysseus'_Bow", "dmg", false, true, false);
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, God.type);
-                legalItems = itemCol.retrieveLegalItems(true, true, true, God.type);
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, God.type);
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, God.type);
+                legalBoots = itemCol.RetrieveLegalBoots(true, true, true, God.godType);
+                legalItems = itemCol.RetrieveLegalItems(true, true, true, God.godType);
+                legalRelics = itemCol.RetrieveLegalRelics(true, true, true, God.godType);
+                legalStarters = itemCol.RetrieveLegalStarters(true, true, true, God.godType);
             }
             else if (this.TextInput.Text.ToLower() == "kloppermand")
             {
@@ -293,10 +293,10 @@ namespace DankSmite
                 Build[7] = new Item("Shield_of_Thorns", "def", true, true, false);
                 Build[8] = new Item("Mark_of_the_Vanguard", "def", true, true, false);
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, God.type);
-                legalItems = itemCol.retrieveLegalItems(true, true, true, God.type);
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, God.type);
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, God.type);
+                legalBoots = itemCol.RetrieveLegalBoots(true, true, true, God.godType);
+                legalItems = itemCol.RetrieveLegalItems(true, true, true, God.godType);
+                legalRelics = itemCol.RetrieveLegalRelics(true, true, true, God.godType);
+                legalStarters = itemCol.RetrieveLegalStarters(true, true, true, God.godType);
             }
             #endregion
             //Validation of proper input
@@ -346,10 +346,10 @@ namespace DankSmite
                 Build[7] = new Item("Blink_Rune", "dmg", true, true, false);
                 Build[8] = new Item("Deathbringer", "dmg", false, true, false);
 
-                legalBoots = itemCol.retrieveLegalBoots(true, true, true, God.type);
-                legalItems = itemCol.retrieveLegalItems(true, true, true, God.type);
-                legalRelics = itemCol.retrieveLegalRelics(true, true, true, God.type);
-                legalStarters = itemCol.retrieveLegalStarters(true, true, true, God.type);
+                legalBoots = itemCol.RetrieveLegalBoots(true, true, true, God.godType);
+                legalItems = itemCol.RetrieveLegalItems(true, true, true, God.godType);
+                legalRelics = itemCol.RetrieveLegalRelics(true, true, true, God.godType);
+                legalStarters = itemCol.RetrieveLegalStarters(true, true, true, God.godType);
             }
 
             //Sets labels
@@ -605,7 +605,7 @@ namespace DankSmite
         public void DrawGodPictureBox()
         {
             this.GodPicture.BackgroundImage = (Image)Resources.ResourceManager.GetObject(NamingFormatter(_god.name));
-            if (_god.type.Equals("g") || _god.type.Equals("m"))
+            if (_god.godType.Equals("g") || _god.godType.Equals("m"))
             {
                 this.GodPicture.Image = (Image)Resources.ResourceManager.GetObject("DankFrameBlue");
             }
@@ -727,15 +727,15 @@ namespace DankSmite
         {
             //Choose god
             int choice;
-            legalGods = godCol.retrieveLegalList(g, m, h, a, w);
+            legalGods = godCol.RetrieveLegalList(g, m, h, a, w);
 
             choice = rnd.Next(legalGods.Count);
             God = legalGods[choice];
 
-            legalBoots = itemCol.retrieveLegalBoots(dmg, hyb, def, God.type);
-            legalItems = itemCol.retrieveLegalItems(dmg, hyb, def, God.type);
-            legalRelics = itemCol.retrieveLegalRelics(dmg, hyb, def, God.type);
-            legalStarters = itemCol.retrieveLegalStarters(dmg, hyb, def, God.type);
+            legalBoots = itemCol.RetrieveLegalBoots(dmg, hyb, def, God.godType);
+            legalItems = itemCol.RetrieveLegalItems(dmg, hyb, def, God.godType);
+            legalRelics = itemCol.RetrieveLegalRelics(dmg, hyb, def, God.godType);
+            legalStarters = itemCol.RetrieveLegalStarters(dmg, hyb, def, God.godType);
 
             for (int i = 0; i < 9; i++)
             {
@@ -748,37 +748,37 @@ namespace DankSmite
         {
             bool foundGod = false;
             List<string> ls = new List<string>();
-            foreach (God gd in godCol.retrieveLegalList(true, true, true, true, true))
+            foreach (God gd in godCol.RetrieveLegalList(true, true, true, true, true))
             {
                 if (gd.name.ToLower().Equals(this.TextInput.Text.ToLower().Replace(" ", "_")))
                 {
                     foundGod = true;
                     _god = gd;
-                    if (_god.type.Equals("g"))
+                    if (_god.godType.Equals("g"))
                     {
-                        legalGods = godCol.retrieveLegalList(true, false, false, false, false);
+                        legalGods = godCol.RetrieveLegalList(true, false, false, false, false);
                     }
-                    else if (_god.type.Equals("m"))
+                    else if (_god.godType.Equals("m"))
                     {
-                        legalGods = godCol.retrieveLegalList(false, true, false, false, false);
+                        legalGods = godCol.RetrieveLegalList(false, true, false, false, false);
                     }
-                    else if (_god.type.Equals("h"))
+                    else if (_god.godType.Equals("h"))
                     {
-                        legalGods = godCol.retrieveLegalList(false, false, true, false, false);
+                        legalGods = godCol.RetrieveLegalList(false, false, true, false, false);
                     }
-                    else if (_god.type.Equals("a"))
+                    else if (_god.godType.Equals("a"))
                     {
-                        legalGods = godCol.retrieveLegalList(false, false, false, true, false);
+                        legalGods = godCol.RetrieveLegalList(false, false, false, true, false);
                     }
-                    else if (_god.type.Equals("w"))
+                    else if (_god.godType.Equals("w"))
                     {
-                        legalGods = godCol.retrieveLegalList(false, false, false, false, true);
+                        legalGods = godCol.RetrieveLegalList(false, false, false, false, true);
                     }
 
-                    legalBoots = itemCol.retrieveLegalBoots(dmg, hyb, def, God.type);
-                    legalItems = itemCol.retrieveLegalItems(dmg, hyb, def, God.type);
-                    legalRelics = itemCol.retrieveLegalRelics(dmg, hyb, def, God.type);
-                    legalStarters = itemCol.retrieveLegalStarters(dmg, hyb, def, God.type);
+                    legalBoots = itemCol.RetrieveLegalBoots(dmg, hyb, def, God.godType);
+                    legalItems = itemCol.RetrieveLegalItems(dmg, hyb, def, God.godType);
+                    legalRelics = itemCol.RetrieveLegalRelics(dmg, hyb, def, God.godType);
+                    legalStarters = itemCol.RetrieveLegalStarters(dmg, hyb, def, God.godType);
 
                     for (int i = 0; i < 9; i++)
                     {
@@ -830,7 +830,7 @@ namespace DankSmite
                 {
                     choice = rnd.Next(legalItems.Count);
                     itemCandidate = legalItems[choice];
-                } while (itemInBuild(itemCandidate) || (itemCandidate.isKatana && God.type.Equals("h")));
+                } while (itemInBuild(itemCandidate) || (itemCandidate.isKatana && God.godType.Equals("h")));
             }
 
             //Relics
@@ -860,7 +860,7 @@ namespace DankSmite
         public void rerollGod()
         {
             bool isMag = false;
-            if (God.type.Equals("g") || God.type.Equals("m"))
+            if (God.godType.Equals("g") || God.godType.Equals("m"))
             {
                 isMag = true;
             }
@@ -876,8 +876,8 @@ namespace DankSmite
                     choice = rnd.Next(legalGods.Count);
                     godCandidate = legalGods[choice];
                 } while (
-                            !godCandidate.type.Equals("m") 
-                            && !godCandidate.type.Equals("g")
+                            !godCandidate.godType.Equals("m") 
+                            && !godCandidate.godType.Equals("g")
                             || godCandidate.name.Equals(God.name));
 
             }
@@ -890,8 +890,8 @@ namespace DankSmite
                         choice = rnd.Next(legalGods.Count);
                         godCandidate = legalGods[choice];
                     } while (
-                               !godCandidate.type.Equals("a")
-                                && !godCandidate.type.Equals("w")
+                               !godCandidate.godType.Equals("a")
+                                && !godCandidate.godType.Equals("w")
                             || godCandidate.name.Equals(God.name)
                                 );
                 }
@@ -902,9 +902,9 @@ namespace DankSmite
                         choice = rnd.Next(legalGods.Count);
                         godCandidate = legalGods[choice];
                     } while (
-                               (!godCandidate.type.Equals("h")
-                                && !godCandidate.type.Equals("a")
-                                && !godCandidate.type.Equals("w"))
+                               (!godCandidate.godType.Equals("h")
+                                && !godCandidate.godType.Equals("a")
+                                && !godCandidate.godType.Equals("w"))
                             || godCandidate.name.Equals(God.name)
                                 );
                 }

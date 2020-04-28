@@ -4,7 +4,7 @@ body {
     padding-bottom: 20px;
     background-image: url(../Resources/SmiteBackground2.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: inherit;
 }
 
 
@@ -14,6 +14,55 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     background-color: forestgreen;
+    opacity: 0.9;
+    fill-opacity: 1;
+    height: 800px;
+}
+
+.ItemUpdatePanel{
+    position: relative;
+    height: 330px;
+    left: 548px;
+    top: 259px;
+    width: 560px;
+    background-color: whitesmoke;
+    background-image:url("../Resources/FrameGeneralText.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+
+.DropDownListUpdatePanel{
+    font-size:15px;
+    color:antiquewhite;
+}
+
+.RerollPanel {
+    font-size: 25px;
+    color: lightblue;
+    background-image: url(../Resources/FrameRerollCounter.png);
+    background-position: center;
+    background-size: cover;
+    width: 102px;
+    height: 35px;
+}
+
+.ItemLabel {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    fill-opacity: 0.5;
+    opacity: 0.8;
+}
+
+.CheckboxHeaderLabel {
+    font-weight:700; 
+    font-size:25px;
+}
+
+.CheckboxText {
+    font-weight:inherit; 
+    font-size:inherit
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
